@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Events & Wedding Planner - Where Your Love Story Becomes a Grand Celebration</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Premium event planning & wedding services in Muzaffarpur, Bihar. Experience luxury events with AR Events & Wedding Planner - where your love story becomes a grand celebration.">
+    <meta name="keywords" content="wedding planner, event management, corporate events, birthday parties, award ceremonies, cultural events, Muzaffarpur, Bihar">
+    <meta name="theme-color" content="#D19C4A">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AR Events & Wedding Planner">
+    <meta property="og:description" content="Where Your Love Story Becomes a Grand Celebration">
+    <meta property="og:site_name" content="AR Events & Wedding Planner">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Premium CSS -->
+    <link rel="stylesheet" href="styles-premium.css">
+</head>
+<body>
+    <!-- ==========================================
+         HEADER & NAVIGATION
+         ========================================== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo2.svg" alt="AR Events Logo" class="logo-img">
+                </a>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="wedding-planning.html">Wedding Planning</a></li>
+                        <li><a href="corporate-events.html">Corporate Events</a></li>
+                        <li><a href="birthday-parties.html">Birthday Parties</a></li>
+                        <li><a href="cultural-events.html">Cultural Events</a></li>
+                        <li><a href="college-festivals.html">College Festivals</a></li>
+                        <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <a href="book.html" class="book-btn">Book Now</a>
+
+            <div class="hamburger-menu" id="hamburger" onclick="toggleMobileNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION - CINEMATIC
+         ========================================== -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        
+        <div class="hero-content">
+            <h1 class="fade-in-up">Turning Moments Into Magic</h1>
+            <p class="hero-tagline">Where Your Love Story Becomes a Grand Celebration</p>
+            <p class="hero-description">
+                Transform your vision into reality with premium event planning and design that captures emotion, tells stories, and creates unforgettable memories.
+            </p>
+            
+            <div class="hero-cta-group">
+                <a href="book.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Book Your Event
+                </a>
+                <a href="#services" class="btn btn-white">
+                    <i class="fas fa-arrow-down"></i> Explore Services
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BRAND STORY SECTION
+         ========================================== -->
+    <section class="container" style="padding: var(--space-3xl) var(--space-lg);">
+        <div class="story" style="animation: fadeInUp 0.8s ease-out;">
+            <div class="story-content fade-in-left">
+                <h2 data-animate="fade-in-left">Our Story</h2>
+                <p>
+                    For over a decade, AR Events & Wedding Planner has been at the heart of Muzaffarpur's most spectacular celebrations. We believe that every event tells a unique story—and we're passionate about making yours unforgettable.
+                </p>
+                <p>
+                    From intimate ceremonies to grand galas, we combine artistic vision with meticulous planning to create experiences that transcend expectations. Our team of designers, coordinators, and creative strategists work together to ensure every detail reflects your dreams.
+                </p>
+                
+                <div class="story-highlights">
+                    <div class="highlight fade-in-left" style="animation-delay: 0.2s;">
+                        <div class="highlight-icon"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h3>150+ Successful Events</h3>
+                            <p>Weddings, corporate functions, celebrations, and everything in between.</p>
+                        </div>
+                    </div>
+                    <div class="highlight fade-in-left" style="animation-delay: 0.4s;">
+                        <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                        <div>
+                            <h3>Award-Winning Team</h3>
+                            <p>Recognized for excellence in creativity, execution, and client satisfaction.</p>
+                        </div>
+                    </div>
+                    <div class="highlight fade-in-left" style="animation-delay: 0.6s;">
+                        <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                        <div>
+                            <h3>100% Satisfaction Guaranteed</h3>
+                            <p>Your vision is our mission. We commit to excellence at every stage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-image fade-in-right image-depth overlay-dark" data-parallax>
+                <img src="./assets/images/a.webp" alt="AR Events Team" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES SECTION
+         ========================================== -->
+    <section id="services" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="fade-in-up">Our Services</h2>
+            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+                From intimate gatherings to grand celebrations, we specialize in creating extraordinary experiences across all event types.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in-up stagger-1 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="wedding-planning.html" style="animation-delay: 0.1s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Wedding Planning" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Wedding Planning</h3>
+                        <p>Crafting magical ceremonies and receptions that celebrate your unique love story.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in-up stagger-2 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="corporate-events.html" style="animation-delay: 0.2s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/Corporate/orange-blue-white-themed-decoration-main_1667823481.webp" alt="Corporate Events" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Corporate Events</h3>
+                        <p>Professional conferences, galas, and team celebrations that make an impact.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in-up stagger-3 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="birthday-parties.html" style="animation-delay: 0.3s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/Birthday Party/pexels-photo-1126490.webp" alt="Birthday Parties" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Birthday Celebrations</h3>
+                        <p>Vibrant, personalized parties that bring joy and create lifelong memories.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in-up stagger-4 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="award-ceremonies.html" style="animation-delay: 0.4s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/Award/istockphoto-1319849486-612x612.webp" alt="Award Ceremonies" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Award Ceremonies</h3>
+                        <p>Prestigious events that recognize excellence and celebrate achievements.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in-up stagger-5 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="cultural-events.html" style="animation-delay: 0.5s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/God/pexels-photo-3962286.webp" alt="Cultural Events" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Cultural Events</h3>
+                        <p>Authentic celebrations of tradition, heritage, and cultural diversity.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in-up stagger-1 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="college-festivals.html" style="animation-delay: 0.6s;">
+                    <div class="overlay-dark" style="position: relative;">
+                        <img src="./assets/images/Stage/pexels-photo-3708233.webp" alt="College Festivals" loading="lazy">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>College Festivals</h3>
+                        <p>High-energy, youth-centric events that celebrate campus spirit and talent.</p>
+                        <div class="service-card-explore-text"><span>Explore</span> <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: var(--space-2xl);">
+                <a href="#services" class="btn btn-secondary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         WHY CHOOSE US - FEATURES
+         ========================================== -->
+    <section style="padding: var(--space-3xl) var(--space-lg);">
+        <div class="container">
+            <h2 class="fade-in-up" style="margin-bottom: var(--space-lg);">Why Choose AR Events</h2>
+            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+                We go beyond planning—we create experiences that resonate with your guests and stand the test of time.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-box fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Creative Vision</h3>
+                    <p>Custom designs and concepts tailored to your personality and preferences.</p>
+                </div>
+
+                <div class="feature-box fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="feature-icon"><i class="fas fa-check-double"></i></div>
+                    <h3>Attention to Detail</h3>
+                    <p>Every element, from décor to timing, is meticulously coordinated for perfection.</p>
+                </div>
+
+                <div class="feature-box fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Trusted Vendors</h3>
+                    <p>Partnerships with premium caterers, florists, and entertainment providers.</p>
+                </div>
+
+                <div class="feature-box fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated team available before, during, and after your event.</p>
+                </div>
+
+                <div class="feature-box fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>We source the finest materials and services for an elevated experience.</p>
+                </div>
+
+                <div class="feature-box fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Stress-Free Experience</h3>
+                    <p>Leave the logistics to us while you enjoy the journey with loved ones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PORTFOLIO PREVIEW
+         ========================================== -->
+    <section style="background-color: var(--bg-light); padding: var(--space-3xl) var(--space-lg);">
+        <div class="container">
+            <h2 class="fade-in-up">Our Portfolio</h2>
+            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+                Explore a selection of our most stunning events. Each one tells a unique story of creativity, elegance, and excellence.
+            </p>
+
+            <div class="portfolio-grid" style="margin-bottom: var(--space-2xl);">
+                <div class="portfolio-item fade-in-up stagger-1 tilt-on-hover lightbox-trigger" data-alt="Wedding - Timeless Romance" style="animation-delay: 0.1s;">
+                    <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Wedding" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Timeless Romance</h3>
+                            <p><i class="fas fa-search-plus"></i> Wedding</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in-up stagger-2 tilt-on-hover lightbox-trigger" data-alt="Corporate Excellence - Business Gala" style="animation-delay: 0.2s;">
+                    <img src="./assets/images/Corporate/orange-blue-white-themed-decoration-main_1667823481.webp" alt="Corporate" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Corporate Excellence</h3>
+                            <p><i class="fas fa-search-plus"></i> Business Gala</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in-up stagger-3 tilt-on-hover lightbox-trigger" data-alt="Joy & Celebration - Birthday Bash" style="animation-delay: 0.3s;">
+                    <img src="./assets/images/Birthday Party/pexels-photo-1126490.webp" alt="Birthday" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Joy & Celebration</h3>
+                            <p><i class="fas fa-search-plus"></i> Birthday Bash</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in-up stagger-4 tilt-on-hover lightbox-trigger" data-alt="Recognition Night - Award Ceremony" style="animation-delay: 0.4s;">
+                    <img src="./assets/images/Award/istockphoto-1319849486-612x612.webp" alt="Award" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Recognition Night</h3>
+                            <p><i class="fas fa-search-plus"></i> Award Ceremony</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in-up stagger-5 tilt-on-hover lightbox-trigger" data-alt="Heritage & Tradition - Cultural Festival" style="animation-delay: 0.5s;">
+                    <img src="./assets/images/Cultural/pexels-photo-2408666.webp" alt="Cultural" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Heritage & Tradition</h3>
+                            <p><i class="fas fa-search-plus"></i> Cultural Festival</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in-up stagger-1 tilt-on-hover lightbox-trigger" data-alt="Campus Energy - College Festival" style="animation-delay: 0.6s;">
+                    <img src="./assets/images/Stage/pexels-photo-3708233.webp" alt="Festival" class="portfolio-item-image" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Campus Energy</h3>
+                            <p><i class="fas fa-search-plus"></i> College Festival</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS
+         ========================================== -->
+    <section style="padding: var(--space-3xl) var(--space-lg);">
+        <div class="container">
+            <h2 class="fade-in-up">What Our Clients Say</h2>
+            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+                Real stories from couples and families who trusted us with their most special moments.
+            </p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "AR Events transformed our wedding into a fairy tale. Every detail was perfect, and the team's creativity exceeded our wildest expectations. Truly magical!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-author-info">
+                            <h4>Rajesh & Kavya</h4>
+                            <p>Wedding, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Our corporate gala was a huge success thanks to AR Events. Professional, organized, and delivered beyond expectations. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SP</div>
+                        <div class="testimonial-author-info">
+                            <h4>Sunita Patel</h4>
+                            <p>Corporate Event Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Best birthday party ever! The decorations, entertainment, and attention to detail made my daughter's day unforgettable. Thank you, AR Events!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MP</div>
+                        <div class="testimonial-author-info">
+                            <h4>Madhav Sharma</h4>
+                            <p>Parent, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FINAL CTA SECTION
+         ========================================== -->
+    <section class="cta-section" style="margin: var(--space-2xl);">
+        <div class="container">
+            <h2 class="fade-in-up" style="color: var(--primary-white);">Ready to Create Your Magic?</h2>
+            <p class="cta-description fade-in-up" style="animation-delay: 0.2s;">
+                Let's start planning your unforgettable event. Our team is ready to bring your vision to life with creativity, expertise, and passion.
+            </p>
+            <div class="cta-buttons fade-in-up" style="animation-delay: 0.4s;">
+                <a href="book.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt"></i> Start Booking
+                </a>
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section fade-in-up" style="animation-delay: 0.1s;">
+                    <h4>AR Events & Wedding Planner</h4>
+                    <p style="color: var(--secondary-light); margin-bottom: var(--space-md);">
+                        Where Your Love Story Becomes a Grand Celebration
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Wedding Planning</a></li>
+                        <li><a href="#services">Corporate Events</a></li>
+                        <li><a href="#services">Birthday Parties</a></li>
+                        <li><a href="#services">Award Ceremonies</a></li>
+                        <li><a href="#services">Cultural Events</a></li>
+                        <li><a href="#services">College Festivals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.3s;">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
+                    <h4>Get In Touch</h4>
+                    <p style="color: var(--secondary-light);">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@arevents.in">info@arevents.in</a>
+                    </p>
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </p>
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Location:</strong><br>
+                        Muzaffarpur, Bihar, India
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-divider fade-in-up" style="animation-delay: 0.5s;">
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        &copy; 2024 AR Events & Wedding Planner. All rights reserved.
+                    </p>
+                    <div style="display: flex; gap: 2rem;">
+                        <a href="#" style="color: var(--secondary-light); font-size: 0.9rem;">Privacy Policy</a>
+                        <a href="#" style="color: var(--secondary-light); font-size: 0.9rem;">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         STICKY CTA BUTTONS
+         ========================================== -->
+    <div class="sticky-cta" id="stickyCTA">
+        <a href="book.html" class="sticky-btn sticky-btn-book" title="Book Now">
+            <i class="fas fa-calendar-check"></i>
+        </a>
+        <a href="https://wa.me/919876543210" target="_blank" class="sticky-btn sticky-btn-whatsapp" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919876543210" class="sticky-btn sticky-btn-call" title="Call">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- ==========================================
+         PREMIUM JAVASCRIPT
+         ========================================== -->
+    <script src="scripts-premium.js"></script>
+</body>
+</html>
