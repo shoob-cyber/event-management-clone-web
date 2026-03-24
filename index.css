@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Google Fonts removed - using custom Kenao font */
+@font-face {
+  font-family: "Kenao";
+  src: url("./assets/fonts/Kenao.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "Borisna";
   src: url("./assets/fonts/Borisna.ttf") format("ttf");
@@ -30,7 +37,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "Kenao", sans-serif;
   --fa-font-display: swap;
 }
 
@@ -540,6 +547,9 @@ html {
   height: 48px;
   margin-top: -15px;
 }
+.testimonials-section h2 {
+  color: white !important;
+}
 .why-us {
   padding: 50px 5%;
   text-align: center;
@@ -551,6 +561,9 @@ html {
 .why-us img {
   height: 48px;
   margin-top: -15px;
+}
+.why-us h2 {
+  color: white !important;
 }
 
 @keyframes fadeInSection {
@@ -567,7 +580,8 @@ html {
 
 .services-section h2 {
   font-size: 2.4vw;
-  font-family: "Borisna";
+  font-family: "Kenao", serif;
+  letter-spacing: 0.05em;
   -webkit-background-clip: text;
   background-clip: text;
   color: rgb(0, 0, 0);
@@ -618,7 +632,8 @@ html {
   font-weight: 700;
   margin: 0 0 10px;
   z-index: 2;
-  font-family: "Borisna";
+  font-family: "Kenao", serif;
+  letter-spacing: 0.03em;
   transition: all 0.4s ease;
   text-align: center;
   max-width: 90%;
@@ -753,7 +768,8 @@ html {
   font-size: 2.2vw;
   color: black;
   margin: 50px 0 30px;
-  font-family: "Borisna";
+  font-family: "Kenao", serif;
+  letter-spacing: 0.04em;
   animation: fadeInDown 1s ease-in-out;
 }
 .gallery-slider {
@@ -1058,7 +1074,8 @@ html {
 }
 
 .event-card h3 {
-  font-family: "Borinsa";
+  font-family: "Kenao", sans-serif;
+  font-weight: 600;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -1337,7 +1354,7 @@ html {
   border: 2px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all 0.4s ease;
-  font-family: "Inter", sans-serif;
+  font-family: "Kenao", sans-serif;
   color: #eee;
   width: 20vw;
   border-radius: 10px;
@@ -1489,7 +1506,7 @@ html {
   color: #eee;
   background-color: rgba(255, 255, 255, 0.05);
   border: 2px solid rgba(255, 255, 255, 0.05);
-  font-family: "Poppins", sans-serif;
+  font-family: "Kenao", sans-serif;
 }
 #community-grid .event-card {
   width: 15vw !important;

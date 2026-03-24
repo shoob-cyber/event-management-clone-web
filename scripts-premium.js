@@ -3,6 +3,30 @@
 // ============================================
 
 // ==========================================
+// 0. CINEMATIC HERO VIDEO WITH FADE LOOP
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const heroVideo = document.getElementById('heroVideo');
+  
+  if (!heroVideo) return;
+  
+  // Restart fade animation when video loops
+  heroVideo.addEventListener('ended', () => {
+    // Reset animation by removing and re-adding the animation class
+    heroVideo.style.animation = 'none';
+    setTimeout(() => {
+      heroVideo.style.animation = 'videoFadeInOut 6s ease-in-out';
+    }, 10);
+  });
+  
+  // Ensure video plays on page load
+  heroVideo.play().catch(() => {
+    // Autoplay failed, which is normal on some browsers without user interaction
+    console.log('Video autoplay prevention - user interaction may be needed');
+  });
+});
+
+// ==========================================
 // 1. MOBILE NAVIGATION
 // ==========================================
 let isMobileNavOpen = false;

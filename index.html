@@ -72,7 +72,13 @@
          HERO SECTION - CINEMATIC
          ========================================== -->
     <section class="hero" id="home">
-        <div class="hero-background"></div>
+        <!-- Cinematic Video Background -->
+        <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Gradient Overlay for Text Readability -->
+        <div class="hero-overlay"></div>
         
         <div class="hero-content">
             <h1 class="fade-in-up">Turning Moments Into Magic</h1>
@@ -115,21 +121,21 @@
                 <div class="story-highlights">
                     <div class="highlight fade-in-left" style="animation-delay: 0.2s;">
                         <div class="highlight-icon"><i class="fas fa-check-circle"></i></div>
-                        <div>
+                        <div style="width: 100%;">
                             <h3>150+ Successful Events</h3>
                             <p>Weddings, corporate functions, celebrations, and everything in between.</p>
                         </div>
                     </div>
                     <div class="highlight fade-in-left" style="animation-delay: 0.4s;">
                         <div class="highlight-icon"><i class="fas fa-award"></i></div>
-                        <div>
+                        <div style="width: 100%;">
                             <h3>Award-Winning Team</h3>
                             <p>Recognized for excellence in creativity, execution, and client satisfaction.</p>
                         </div>
                     </div>
                     <div class="highlight fade-in-left" style="animation-delay: 0.6s;">
                         <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
-                        <div>
+                        <div style="width: 100%;">
                             <h3>100% Satisfaction Guaranteed</h3>
                             <p>Your vision is our mission. We commit to excellence at every stage.</p>
                         </div>
@@ -155,9 +161,7 @@
             
             <div class="services-grid">
                 <div class="service-card fade-in-up stagger-1 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="wedding-planning.html" style="animation-delay: 0.1s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Wedding Planning" loading="lazy">
-                    </div>
+                    <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Wedding Planning" loading="lazy">
                     <div class="service-card-content">
                         <h3>Wedding Planning</h3>
                         <p>Crafting magical ceremonies and receptions that celebrate your unique love story.</p>
@@ -166,9 +170,7 @@
                 </div>
 
                 <div class="service-card fade-in-up stagger-2 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="corporate-events.html" style="animation-delay: 0.2s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/Corporate/orange-blue-white-themed-decoration-main_1667823481.webp" alt="Corporate Events" loading="lazy">
-                    </div>
+                    <img src="./assets/images/Corporate/orange-blue-white-themed-decoration-main_1667823481.webp" alt="Corporate Events" loading="lazy">
                     <div class="service-card-content">
                         <h3>Corporate Events</h3>
                         <p>Professional conferences, galas, and team celebrations that make an impact.</p>
@@ -177,9 +179,7 @@
                 </div>
 
                 <div class="service-card fade-in-up stagger-3 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="birthday-parties.html" style="animation-delay: 0.3s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/Birthday Party/pexels-photo-1126490.webp" alt="Birthday Parties" loading="lazy">
-                    </div>
+                    <img src="./assets/images/Birthday Party/1.webp" alt="Birthday Parties" loading="lazy">
                     <div class="service-card-content">
                         <h3>Birthday Celebrations</h3>
                         <p>Vibrant, personalized parties that bring joy and create lifelong memories.</p>
@@ -188,9 +188,7 @@
                 </div>
 
                 <div class="service-card fade-in-up stagger-4 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="award-ceremonies.html" style="animation-delay: 0.4s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/Award/istockphoto-1319849486-612x612.webp" alt="Award Ceremonies" loading="lazy">
-                    </div>
+                    <img src="./assets/images/Award/1.webp" alt="Award Ceremonies" loading="lazy">
                     <div class="service-card-content">
                         <h3>Award Ceremonies</h3>
                         <p>Prestigious events that recognize excellence and celebrate achievements.</p>
@@ -198,10 +196,8 @@
                     </div>
                 </div>
 
-                <div class="service-card fade-in-up stagger-5 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="cultural-events.html" style="animation-delay: 0.5s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/God/pexels-photo-3962286.webp" alt="Cultural Events" loading="lazy">
-                    </div>
+                <div class="service-card fade-in-up" data-link="cultural-events.html" style="animation-delay: 0.5s;">
+                    <img src="./assets/images/Stage/465692651_8953257021380443_8109159992700779700_n.webp" alt="Cultural Events" loading="lazy">
                     <div class="service-card-content">
                         <h3>Cultural Events</h3>
                         <p>Authentic celebrations of tradition, heritage, and cultural diversity.</p>
@@ -209,10 +205,8 @@
                     </div>
                 </div>
 
-                <div class="service-card fade-in-up stagger-1 tilt-on-hover image-depth" data-animate="fade-in-up" data-link="college-festivals.html" style="animation-delay: 0.6s;">
-                    <div class="overlay-dark" style="position: relative;">
-                        <img src="./assets/images/Stage/pexels-photo-3708233.webp" alt="College Festivals" loading="lazy">
-                    </div>
+                <div class="service-card fade-in-up" data-link="college-festivals.html" style="animation-delay: 0.6s;">
+                    <img src="./assets/images/Stage/84181483_2991883077517897_7046372587617648640_n.webp" alt="College Festivals" loading="lazy">
                     <div class="service-card-content">
                         <h3>College Festivals</h3>
                         <p>High-energy, youth-centric events that celebrate campus spirit and talent.</p>
@@ -230,10 +224,10 @@
     <!-- ==========================================
          WHY CHOOSE US - FEATURES
          ========================================== -->
-    <section style="padding: var(--space-3xl) var(--space-lg);">
+    <section class="why-choose-section" style="padding: var(--space-3xl) var(--space-lg);">
         <div class="container">
             <h2 class="fade-in-up" style="margin-bottom: var(--space-lg);">Why Choose AR Events</h2>
-            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+            <p class="why-choose-description" style="text-align: center; margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
                 We go beyond planning—we create experiences that resonate with your guests and stand the test of time.
             </p>
 
@@ -309,7 +303,7 @@
                 </div>
 
                 <div class="portfolio-item fade-in-up stagger-3 tilt-on-hover lightbox-trigger" data-alt="Joy & Celebration - Birthday Bash" style="animation-delay: 0.3s;">
-                    <img src="./assets/images/Birthday Party/pexels-photo-1126490.webp" alt="Birthday" class="portfolio-item-image" loading="lazy">
+                    <img src="./assets/images/Birthday Party/1.webp" alt="Birthday Party" class="portfolio-item-image" loading="lazy">
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-info">
                             <h3>Joy & Celebration</h3>
@@ -319,7 +313,7 @@
                 </div>
 
                 <div class="portfolio-item fade-in-up stagger-4 tilt-on-hover lightbox-trigger" data-alt="Recognition Night - Award Ceremony" style="animation-delay: 0.4s;">
-                    <img src="./assets/images/Award/istockphoto-1319849486-612x612.webp" alt="Award" class="portfolio-item-image" loading="lazy">
+                    <img src="./assets/images/Award/1.webp" alt="Award Ceremony" class="portfolio-item-image" loading="lazy">
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-info">
                             <h3>Recognition Night</h3>
@@ -329,7 +323,7 @@
                 </div>
 
                 <div class="portfolio-item fade-in-up stagger-5 tilt-on-hover lightbox-trigger" data-alt="Heritage & Tradition - Cultural Festival" style="animation-delay: 0.5s;">
-                    <img src="./assets/images/Cultural/pexels-photo-2408666.webp" alt="Cultural" class="portfolio-item-image" loading="lazy">
+                    <img src="./assets/images/Stage/465692651_8953257021380443_8109159992700779700_n.webp" alt="Cultural Event" class="portfolio-item-image" loading="lazy">
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-info">
                             <h3>Heritage & Tradition</h3>
@@ -339,7 +333,7 @@
                 </div>
 
                 <div class="portfolio-item fade-in-up stagger-1 tilt-on-hover lightbox-trigger" data-alt="Campus Energy - College Festival" style="animation-delay: 0.6s;">
-                    <img src="./assets/images/Stage/pexels-photo-3708233.webp" alt="Festival" class="portfolio-item-image" loading="lazy">
+                    <img src="./assets/images/Stage/84181483_2991883077517897_7046372587617648640_n.webp" alt="Festival Event" class="portfolio-item-image" loading="lazy">
                     <div class="portfolio-item-overlay">
                         <div class="portfolio-item-info">
                             <h3>Campus Energy</h3>
@@ -358,10 +352,10 @@
     <!-- ==========================================
          TESTIMONIALS
          ========================================== -->
-    <section style="padding: var(--space-3xl) var(--space-lg);">
+    <section class="what-clients-say-section" style="padding: var(--space-3xl) var(--space-lg);">
         <div class="container">
             <h2 class="fade-in-up">What Our Clients Say</h2>
-            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
+            <p class="what-clients-description" style="text-align: center; margin-bottom: var(--space-2xl); max-width: 700px; margin-left: auto; margin-right: auto;">
                 Real stories from couples and families who trusted us with their most special moments.
             </p>
 

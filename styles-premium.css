@@ -3,9 +3,16 @@
    Brand: Luxury Wedding & Event Planning
    ============================================ */
 
-/* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
+/* Custom Font - Kenao */
+@font-face {
+  font-family: "Kenao";
+  src: url("./assets/fonts/Kenao.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Icon Fonts - Font Awesome */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
 /* ============================================
@@ -83,7 +90,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", "Kenao Sans", sans-serif;
+  font-family: "Kenao", sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-dark);
   line-height: 1.6;
@@ -109,10 +116,11 @@ body {
    TYPOGRAPHY SYSTEM
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "Kenao", serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--space-md);
+  letter-spacing: 0.03em;
 }
 
 h1 {
@@ -147,6 +155,7 @@ p {
   line-height: 1.8;
   margin-bottom: var(--space-md);
   color: var(--secondary-gray);
+  font-family: "Kenao", sans-serif;
 }
 
 a {
@@ -166,7 +175,7 @@ a {
   padding: var(--space-md) var(--space-lg);
   border: none;
   border-radius: var(--radius-lg);
-  font-family: "Poppins", sans-serif;
+  font-family: "Kenao", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
@@ -268,9 +277,10 @@ nav {
 }
 
 .logo {
-  font-family: "Playfair Display", serif;
+  font-family: "Kenao", serif;
   font-size: 1.8rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
   background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -518,43 +528,7 @@ nav {
   margin-top: 80px;
 }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(15, 15, 15, 0.7) 0%, rgba(81, 81, 82, 0.5) 100%),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" seed="2"/><feColorMatrix in="noise" type="saturate" values="0"/></filter></defs><rect width="1440" height="900" fill="%230F0F0F"/><rect width="1440" height="900" fill="url(%23grad)" opacity="0.1" filter="url(%23noise)"/><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23D19C4A;stop-opacity:0.08"/><stop offset="100%" style="stop-color:%23515152;stop-opacity:0.08"/></linearGradient></defs></svg>');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  animation: zoomSlow 20s ease-in-out infinite;
-  will-change: transform;
-}
-
-/* Light leak effect */
-.hero-background::before {
-  content: "";
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 40%;
-  height: 40%;
-  background: radial-gradient(circle, rgba(209, 156, 74, 0.08) 0%, transparent 70%);
-  blur-filter: blur(80px);
-  pointer-events: none;
-}
-
-@keyframes zoomSlow {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
+/* Cinematic Video Background */
 .hero-video {
   position: absolute;
   top: 0;
@@ -562,7 +536,62 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  z-index: 1;
+  animation: videoFadeInOut 6s ease-in-out;
+}
+
+/* Fade in at start and fade out at end with looping */
+@keyframes videoFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Gradient Overlay - Dark for Text Readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.65) 0%, rgba(81, 81, 82, 0.55) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Light leak accent over overlay */
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(circle, rgba(209, 156, 74, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.7) 0%, rgba(81, 81, 82, 0.5) 100%);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  will-change: transform;
 }
 
 .hero-content {
@@ -914,7 +943,7 @@ section:nth-child(even) {
 section h2 {
   text-align: center;
   margin-bottom: var(--space-xl);
-  color: var(--text-dark);
+  color: var(--text-white);
 }
 
 /* ============================================
@@ -942,39 +971,58 @@ section h2 {
 
 .story-highlights {
   display: grid;
-  gap: var(--space-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
   margin: var(--space-2xl) 0;
 }
 
 .highlight {
   display: flex;
-  gap: var(--space-md);
-  padding: var(--space-lg);
-  background: rgba(209, 156, 74, 0.05);
-  border-left: 4px solid var(--primary-gold);
-  border-radius: var(--radius-lg);
-  transition: all var(--transition-fast);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.08) 0%, rgba(209, 156, 74, 0.02) 100%);
+  border-left: 5px solid var(--primary-gold);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .highlight:hover {
-  background: rgba(209, 156, 74, 0.1);
-  transform: translateX(10px);
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.12) 0%, rgba(209, 156, 74, 0.05) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(209, 156, 74, 0.15);
 }
 
 .highlight-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--primary-gold);
-  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(209, 156, 74, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .highlight h3 {
-  font-size: 1.2rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
 }
 
 .highlight p {
   margin: 0;
   font-size: 0.95rem;
+  color: var(--secondary-gray);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 .story-image {
@@ -1000,18 +1048,18 @@ section h2 {
    ============================================ */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-xl);
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-lg);
   margin-top: var(--space-2xl);
+  width: 100%;
 }
 
 .service-card {
   position: relative;
-  aspect-ratio: 1;
+  height: 280px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   cursor: pointer;
-  group: hover;
   box-shadow: var(--shadow-lg);
   transition: all var(--transition-base);
   transform-style: preserve-3d;
@@ -1070,11 +1118,14 @@ section h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: var(--space-lg);
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+  padding: var(--space-xl) var(--space-lg);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
   z-index: 3;
   transform: translateY(40px);
   transition: transform var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .service-card:hover .service-card-content {
@@ -1083,13 +1134,37 @@ section h2 {
 
 .service-card-content h3 {
   color: var(--primary-gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 
 .service-card-content p {
   color: var(--text-light);
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.service-card-explore-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-gold);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-card-explore-text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ============================================
@@ -1126,26 +1201,26 @@ section h2 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
+  width: 100%;
 }
 
 .portfolio-item {
   position: relative;
-  aspect-ratio: 1;
+  height: 250px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
-  group: hover;
   transform-style: preserve-3d;
   perspective: 1000px;
 }
 
 .portfolio-item.masonry-tall {
-  grid-row: span 2;
+  grid-row: span 1;
 }
 
 .portfolio-item-image {
@@ -1230,7 +1305,8 @@ section h2 {
   font-size: 5rem;
   color: var(--primary-gold);
   opacity: 0.2;
-  font-family: "Playfair Display", serif;
+  font-family: "Kenao", serif;
+  font-weight: 700;
   transition: all var(--transition-base);
 }
 
@@ -1364,6 +1440,30 @@ section h2 {
 .feature-box p {
   color: var(--secondary-gray);
   margin: 0;
+}
+
+/* ============================================
+   WHY CHOOSE AR EVENTS SECTION
+   ============================================ */
+.why-choose-section h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.why-choose-description {
+  color: #ffffff !important;
+}
+
+/* ============================================
+   WHAT CLIENTS SAY SECTION
+   ============================================ */
+.what-clients-say-section h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.what-clients-description {
+  color: #ffffff !important;
 }
 
 /* ============================================
@@ -1543,7 +1643,7 @@ section h2 {
 }
 
 .step-number {
-  font-family: "Playfair Display", serif;
+  font-family: "Kenao", serif;
   font-size: 3rem;
   font-weight: 700;
   color: var(--primary-gold);
@@ -2322,7 +2422,7 @@ footer {
   padding: var(--space-md);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  font-family: "Poppins", sans-serif;
+  font-family: "Kenao", sans-serif;
   font-size: 1rem;
   transition: all var(--transition-fast);
 }
@@ -2409,13 +2509,13 @@ footer {
 
   /* Services Grid */
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
   }
 
   /* Portfolio Grid */
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
   }
 
@@ -2496,7 +2596,7 @@ footer {
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .highlight {
@@ -2580,6 +2680,75 @@ footer {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE GRID LAYOUTS
+   ============================================ */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  .story-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlight {
+    padding: var(--space-xl);
+  }
+
+  .highlight-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    height: 250px;
+  }
+
+  .story-highlights {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .highlight {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+  }
+
+  .highlight-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .service-card {
+    height: 280px;
+  }
+
+  .story-highlights {
+    grid-template-columns: 1fr;
   }
 }
 
