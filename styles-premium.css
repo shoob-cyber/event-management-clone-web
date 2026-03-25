@@ -525,7 +525,8 @@ nav {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 0px;
+  padding-top: 120px;
 }
 
 /* Cinematic Video Background */
