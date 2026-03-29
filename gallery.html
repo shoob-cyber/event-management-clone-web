@@ -65,42 +65,12 @@
     <link rel="apple-touch-icon" href="./assets/logo2.svg" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./pages.css" />
     <link rel="stylesheet" href="./styles-premium.css" />
-
-    <!-- Font Awesome with font-display optimization -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
-    </noscript>
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-
-    <!-- Preload critical fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
-    <link rel="stylesheet" href="./index.css" />
     <style>
       .container {
         max-width: 100%;
@@ -206,7 +176,7 @@
     </style>
   </head>
 
-  <body>
+  <body class="gallery-page">
     
     <section class="hero-section-gallery">
       <header class="navbar">
@@ -638,7 +608,7 @@
               e.stopPropagation();
             });
         </script>
-        <script src="./scripts.js"></script>
+        <script src="./scripts-premium.js"></script>
         <script>
           const links = document.querySelectorAll(".nav-links ul li a");
           const currentPage = window.location.pathname.split("/").pop();

@@ -37,7 +37,11 @@
     />
 
 
-    <link rel="stylesheet" href="./index.css" />
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./pages.css" />
     <link rel="stylesheet" href="./styles-premium.css" />
 
     <!-- Font Awesome with font-display optimization -->
@@ -227,7 +231,7 @@
     </style>
   </head>
 
-  <body>
+  <body class="testimonials-page">
     
     <section class="hero-section-services">
       <header class="navbar">
@@ -573,7 +577,6 @@
       </a>
     </div>
 
-    <script src="scripts.js"></script>
     <script src="scripts-premium.js"></script>
     <script>
       const links = document.querySelectorAll(".nav-links ul li a");

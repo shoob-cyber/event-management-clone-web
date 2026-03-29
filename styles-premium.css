@@ -239,24 +239,7 @@ a {
 /* ============================================
    NAVIGATION & HEADER - GLASSMORPHIC PREMIUM
    ============================================ */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(15, 15, 15, 0.4);
-  border-bottom: 1px solid rgba(209, 156, 74, 0.15);
-  transition: all var(--transition-fast);
-  margin: 0.75rem 1rem;
-  border-radius: var(--radius-lg);
-  max-width: calc(100% - 2rem);
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
+
 
 header.scroll-active {
   background: rgba(15, 15, 15, 0.7);
@@ -1389,18 +1372,13 @@ section h2 {
    WHY CHOOSE US SECTION
    ============================================ */
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
   gap: 1.5rem;
-  margin-top: var(--space-2xl);
-  width: 100%;
-  padding: 0;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 10px;
 }
 
 .feature-box {
+  height: 100px;
   text-align: center;
   padding: var(--space-md);
   background: linear-gradient(135deg, var(--primary-white) 0%, rgba(255, 255, 255, 0.95) 100%);
@@ -1417,8 +1395,9 @@ section h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 240px;   /* reduce card width */
-  min-width: 220px;   /* keeps consistency */
+  max-width: 215px;   /* reduce card width */
+  min-width: 215px;   /* keeps consistency */
+  flex: 0 0 auto;      /* prevents shrinking */
   padding: 1.5rem;    /* reduce internal spacing */
 }
 
@@ -1484,6 +1463,10 @@ section h2 {
     0 12px 30px rgba(209, 156, 74, 0.25),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   position: relative;
+}
+
+.feature-icon i {
+  transform: translateY(1px);
 }
 
 .feature-box:hover .feature-icon {
@@ -1710,49 +1693,323 @@ section h2 {
 /* ============================================
    PROCESS TIMELINE SECTION
    ============================================ */
-.process-timeline {
+.process-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(209, 156, 74, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+#process h2 {
+  color: #ffffff;
+}
+
+.process-section h2 {
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(209, 156, 74, 0.3);
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.process-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--primary-light), transparent);
+  margin: rem auto 0;
+}
+
+.process-description {
+  animation: fadeInUp 0.8s ease-out;
+  font-size: 1.1rem;
+  color: var(--secondary-light);
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-3xl);
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  transition: color var(--transition-base);
+}
+
+.process-description::first-letter {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.process-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
+  z-index: 1;
 }
+
+/* Process Card Styling */
+.process-card {
+  position: relative;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(209, 156, 74, 0.05));
+  border: 1px solid rgba(209, 156, 74, 0.3);
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.1), rgba(219, 177, 114, 0.05));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.process-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 1.4rem;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.5), rgba(219, 177, 114, 0.3), rgba(209, 156, 74, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.process-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: rgba(209, 156, 74, 0.6);
+  box-shadow: 0 20px 50px rgba(209, 156, 74, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.process-card:hover::before {
+  opacity: 1;
+}
+
+.process-card:hover::after {
+  opacity: 1;
+}
+
+.process-card-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-gold), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  display: block;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.02em;
+}
+
+.process-card:hover .process-card-number {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.process-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.2), rgba(219, 177, 114, 0.1));
+  border: 2px solid rgba(209, 156, 74, 0.4);
+  border-radius: 1rem;
+  margin: 1rem auto;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.process-card-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.process-card-icon i {
+  font-size: 2.2rem;
+  color: var(--primary-gold);
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.process-card:hover .process-card-icon {
+  background: linear-gradient(135deg, rgba(209, 156, 74, 0.4), rgba(219, 177, 114, 0.2));
+  border-color: rgba(209, 156, 74, 0.8);
+  box-shadow: 0 0 20px rgba(209, 156, 74, 0.4), inset 0 0 15px rgba(209, 156, 74, 0.15);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.process-card:hover .process-card-icon::before {
+  opacity: 1;
+}
+
+.process-card:hover .process-card-icon i {
+  color: #fff;
+  transform: scale(1.15) rotate(-5deg);
+  text-shadow: 0 0 20px rgba(209, 156, 74, 0.8);
+}
+
+.process-card h3 {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.process-card:hover h3 {
+  color: var(--primary-light);
+  text-shadow: 0 0 15px rgba(209, 156, 74, 0.5);
+}
+
+.process-card p {
+  color: var(--secondary-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  transition: color var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.process-card:hover p {
+  color: var(--text-light);
+}
+
+.process-card-arrow {
+  display: inline-block;
+  color: var(--primary-gold);
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.process-card:hover .process-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive Design for Process Cards */
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .process-card {
+    padding: 2rem;
+  }
+
+  .process-card-number {
+    font-size: 2.5rem;
+  }
+
+  .process-card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .process-card-icon i {
+    font-size: 1.8rem;
+  }
+
+  .process-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.process-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
 
 @media (min-width: 1024px) {
   .process-timeline {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
-  
+    
   .process-timeline::before {
     content: "";
     position: absolute;
-    top: 60px;
-    left: 12.5%;
-    right: 12.5%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-gold), var(--primary-dark), var(--primary-gold));
+    top: 55%;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+    transform: translateY(-50%);
     z-index: 0;
   }
 }
 
 .process-step {
-  background: linear-gradient(135deg, rgba(209, 156, 74, 0.05) 0%, rgba(81, 81, 82, 0.02) 100%);
-  border: 1px solid rgba(209, 156, 74, 0.15);
-  border-radius: var(--radius-xl);
-  padding: var(--space-xl);
+  flex: 1;
+  min-width: 220px;
+  max-width: 260px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  border: 1px solid rgba(209,156,74,0.2);
   text-align: center;
   position: relative;
-  transition: all var(--transition-base);
-  z-index: 1;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .process-step:hover {
-  background: linear-gradient(135deg, rgba(209, 156, 74, 0.1) 0%, rgba(81, 81, 82, 0.05) 100%);
-  border-color: rgba(209, 156, 74, 0.3);
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(209, 156, 74, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(209,156,74,0.2);
 }
 
 .step-number {
@@ -1765,7 +2022,7 @@ section h2 {
 }
 
 .process-step h3 {
-  color: var(--text-dark);
+  color: whitesmoke;
   margin-bottom: var(--space-md);
   font-size: 1.5rem;
 }
@@ -1774,7 +2031,7 @@ section h2 {
   color: var(--secondary-gray);
   font-size: 0.95rem;
   line-height: 1.6;
-}
+} 
 
 .step-icon {
   font-size: 3rem;
@@ -1784,11 +2041,12 @@ section h2 {
 }
 
 .process-arrow {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-gold);
   font-size: 1.5rem;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {

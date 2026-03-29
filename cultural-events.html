@@ -24,10 +24,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Premium CSS -->
-    <link rel="stylesheet" href="styles-premium.css">
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="./styles-premium.css">
 </head>
-<body>
+<body class="cultural-page">
     <!-- ==========================================
          HEADER & NAVIGATION
          ========================================== -->
@@ -71,7 +75,7 @@
     <!-- ==========================================
          HERO SECTION - SERVICE PAGE
          ========================================== -->
-    <section class="hero hero-service">
+    <section class="hero-section">
         <div class="hero-background"></div>
         
         <div class="hero-content">
@@ -148,32 +152,32 @@
             </p>
 
             <div class="features-grid">
-                <div class="feature-box fade-in-up" style="animation-delay: 0.1s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.1s;">
                     <div class="feature-icon"><i class="fas fa-creative"></i></div>
                     <h3>Creative Vision</h3>
                     <p>Custom designs and concepts tailored to your preferences.</p>
                 </div>
-                <div class="feature-box fade-in-up" style="animation-delay: 0.2s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.2s;">
                     <div class="feature-icon"><i class="fas fa-check-double"></i></div>
                     <h3>Attention to Detail</h3>
                     <p>Every element is meticulously coordinated for perfection.</p>
                 </div>
-                <div class="feature-box fade-in-up" style="animation-delay: 0.30000000000000004s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.30000000000000004s;">
                     <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
                     <h3>Trusted Vendors</h3>
                     <p>Partnerships with premium service providers.</p>
                 </div>
-                <div class="feature-box fade-in-up" style="animation-delay: 0.4s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.4s;">
                     <div class="feature-icon"><i class="fas fa-headset"></i></div>
                     <h3>24/7 Support</h3>
                     <p>Dedicated team available before, during, and after your event.</p>
                 </div>
-                <div class="feature-box fade-in-up" style="animation-delay: 0.5s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.5s;">
                     <div class="feature-icon"><i class="fas fa-star"></i></div>
                     <h3>Premium Quality</h3>
                     <p>We source the finest materials and services.</p>
                 </div>
-                <div class="feature-box fade-in-up" style="animation-delay: 0.6000000000000001s;">
+                <div class="feature-card fade-in-up" style="animation-delay: 0.6000000000000001s;">
                     <div class="feature-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Stress-Free Experience</h3>
                     <p>Leave the logistics to us while you enjoy the moment.</p>
@@ -183,54 +187,59 @@
     </section>
 
     <!-- ==========================================
-         OUR PROCESS - 4 STEPS
+         OUR PROCESS SECTION
          ========================================== -->
-    <section id="process" style="padding: var(--space-3xl) var(--space-lg);">
+    <section class="process-section" style="padding: var(--space-3xl) var(--space-lg); background-color: var(--bg-dark);">
         <div class="container">
-            <h2 class="fade-in-up" style="text-align: center; margin-bottom: var(--space-xl);">Our Planning Process</h2>
-            <p style="text-align: center; color: var(--secondary-gray); margin-bottom: var(--space-3xl); max-width: 700px; margin-left: auto; margin-right: auto;">
-                A structured approach to creating your perfect experience.
+            <h2 class="fade-in-up">Our Planning Process</h2>
+            <p class="process-description fade-in-up" style="animation-delay: 0.1s;">
+                A structured approach to creating your perfect experience. We guide you through every step with expertise, creativity, and unwavering attention to detail.
             </p>
 
-            <div class="process-timeline">
-                <div class="process-step fade-in-up" style="animation-delay: 0.1s;">
-                    <div class="step-number">01</div>
-                    <h3>Initial Consultation</h3>
-                    <p>We meet to understand your vision, budget, timeline, and preferences. This is where we get to know you and your dreams.</p>
-                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+            <div class="process-grid">
+                <div class="process-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="process-card-number">01</div>
+                    <div class="process-card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>We meet to understand your vision, budget, timeline, and preferences. Your ideas are our starting point.</p>
+                    <div class="process-card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <div class="process-step fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="step-number">02</div>
+                <div class="process-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="process-card-number">02</div>
+                    <div class="process-card-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
                     <h3>Planning & Design</h3>
-                    <p>Our team creates detailed plans, selects venues, vendors, and designs the aesthetic vision for your special day.</p>
-                    <div class="step-icon"><i class="fas fa-pencil"></i></div>
+                    <p>Our team creates detailed plans, selects venues, vendors, and designs your event's visual identity.</p>
+                    <div class="process-card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
+                <div class="process-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="process-card-number">03</div>
+                    <div class="process-card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Coordination</h3>
+                    <p>Finalizations, confirmations, and ensuring everything is perfect. We manage every detail with precision.</p>
+                    <div class="process-card-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
                 </div>
 
-                <div class="process-step fade-in-up" style="animation-delay: 0.3s;">
-                    <div class="step-number">03</div>
-                    <h3>Preparation</h3>
-                    <p>Regular check-ins, finalizations, confirmations, and preparations. We ensure every detail is perfect.</p>
-                    <div class="step-icon"><i class="fas fa-tasks"></i></div>
-                </div>
-
-                <div class="process-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <div class="process-step fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="step-number">04</div>
-                    <h3>Celebration</h3>
-                    <p>Our team manages everything on your event day, allowing you to celebrate with loved ones and create memories.</p>
-                    <div class="step-icon"><i class="fas fa-star"></i></div>
+                <div class="process-card fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="process-card-number">04</div>
+                    <div class="process-card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Execution</h3>
+                    <p>We manage everything so you enjoy your special day stress-free. Your happiness is our ultimate goal.</p>
                 </div>
             </div>
         </div>

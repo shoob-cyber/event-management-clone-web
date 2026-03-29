@@ -79,8 +79,12 @@
       crossorigin
     />
 
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./styles-premium.css" />
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="./styles-premium.css">
 
     <!-- Font Awesome with font-display optimization -->
     <link
@@ -145,7 +149,7 @@
     }
   </style>
 
-  <body>
+  <body class="event-page">
     
     <header class="navbar">
         <div class="nav-container">
@@ -332,7 +336,6 @@
       </div>
     </footer>
 
-    <script src="scripts.js"></script>
     <script src="scripts-premium.js"></script>
 
     <script>

@@ -74,7 +74,11 @@
       crossorigin
     />
 
-    <link rel="stylesheet" href="./index.css" />
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./pages.css" />
     <link rel="stylesheet" href="./styles-premium.css" />
 
     <!-- Font Awesome with font-display optimization -->
@@ -96,90 +100,9 @@
         referrerpolicy="no-referrer"
       />
     </noscript>
-    <style>
-      .gradient-bg {
-        background: linear-gradient(
-          45deg,
-          #f4b86f 0%,
-          #a27158 50%,
-          #5c0469 100%
-        );
-        color: #fff;
-        text-align: center;
-        padding: 1.5rem;
-        border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-      .gradient-bg h3 {
-        margin: 0.5rem 0;
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-      .gradient-bg p {
-        font-size: 0.95rem;
-      }
-      .services-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        padding: 2rem 1rem;
-      }
-      .service-card {
-        height: auto;
-        max-width: 300px;
-      }
-      .leader-section {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 4vw 2vw;
-        gap: 2rem;
-      }
-      .leader-card {
-        flex: 1 1 300px;
-        background-image: url("./assets/owner.jpeg");
-        background-size: cover;
-        background-position: center;
-        border-radius: 12px;
-        height: 100%;
-        max-width: 480px;
-        min-height: 500px;
-        aspect-ratio: 4 / 3;
-        display: flex;
-        align-items: flex-end;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-      .leader-overlay {
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        padding: 1.5rem;
-        border-radius: 0 0 12px 12px;
-        width: 100%;
-      }
-      .leader-message {
-        flex: 1 1 300px;
-        max-width: 600px;
-      }
-      @media screen and (max-width: 768px) {
-        .leader-section {
-          flex-direction: column;
-          align-items: center;
-        }
-        .leader-message {
-          text-align: justify;
-          padding: 0 1rem;
-        }
-        .leader-card {
-          max-width: 100%;
-          min-height: 400px;
-        }
-      }
-    </style>
   </head>
 
-  <body>
+  <body class="about-page">
     <!-- ==========================================
          HEADER & NAVIGATION
          ========================================== -->
@@ -220,76 +143,46 @@
         </div>
     </header>
 
-    <section class="hero-section-about">
-      <div class="photo-card card-top-left">
-        <img
-          src="./assets/images/Wedding/118958618_3530372193668980_3318342923828697794_n.webp"
-          alt="Event 1"
-        />
-      </div>
-
-      <div class="photo-card card-top-right">
-        <img
-          src="./assets/images/Stage/465692651_8953257021380443_8109159992700779700_n.webp"
-          alt="Event 2"
-        />
-      </div>
-
-      <div class="photo-card card-bottom-left">
-        <img
-          src="./assets/images/Stage/465714034_8945358075503671_3940784904431931487_n.webp"
-          alt="Event 3"
-        />
-      </div>
-
-      <div class="photo-card card-bottom-right">
-        <img
-          src="./assets/images/God/56980837_2371553636217514_4391083063447126016_n.webp"
-          alt="Event 4"
-        />
-      </div>
+    <section class="hero-section">
+        <div class="hero-background" 
+       style="background-image: url('./assets/images/1.webp');">
+  </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>About Us</h1>
-        <p>
-          We organize spectacular events that are unforgettable, creative, and
-          flawless.
-        </p>
+        <p class="hero-tagline">
+        We organize spectacular events that are unforgettable, creative, and flawless.</p>
         <a href="book.html" class="hero-btn">Plan Your Event</a>
       </div>
     </section>
 
-    <section class="about-section">
-      <div class="about-content">
-        <h2>About AR event and wedding planner</h2>
-        <p>
-          At AR event and wedding planner, we believe every event is an
-          opportunity to craft unforgettable memories. Based at Christ
-          University, Kengeri Campus, we specialize in creating exceptional
-          experiences — from vibrant festivals to elegant private gatherings.
-          With creativity, precision, and a passion for perfection, our team
-          transforms your vision into reality.
-        </p>
-        <p>
-          Our services cover end-to-end event planning including concept design,
-          logistics management, venue coordination, entertainment booking, and
-          post-event support. Whether it's a corporate event, a private
-          celebration, or a cultural gathering, we ensure every detail is
-          meticulously managed.
-        </p>
-        <p>
-          We take pride in our customer-first approach, dedicated project
-          management, innovative ideas, and seamless execution. AR Event
-          Management is your trusted partner for turning ordinary moments into
-          extraordinary memories.
-        </p>
-        <a href="book.html" class="about-btn">Get Involved</a>
-      </div>
-      <div class="about-image">
-        <img
-          src="./assets/images/Wedding/463968913_8854363821269764_4824260276919925671_n.webp"
-          alt="AR event and wedding planner"
-        />
+    <!-- ABOUT SECTION -->
+    <section class="global-section">
+      <div class="about-container">
+        
+        <div class="about-text">
+          <h2>About AR Event and Wedding Planner</h2>
+          <p>
+            At AR event and wedding planner, we believe every event is an
+            opportunity to craft unforgettable memories. With creativity,
+            precision, and a passion for perfection, our team transforms your
+            vision into reality.
+          </p>
+          <p>
+            Our services cover end-to-end event planning including concept design,
+            logistics management, venue coordination, entertainment booking, and
+            post-event support.
+          </p>
+          <a href="book.html" class="btn btn-primary">Get Involved</a>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="./assets/images/Wedding/463968913_8854363821269764_4824260276919925671_n.webp"
+            alt="AR event and wedding planner"
+          />
+        </div>
+
       </div>
     </section>
     <div class="wave-container">
@@ -302,35 +195,26 @@
       </svg>
     </div>
 
-    <section class="services-section">
-      <h2 style="text-align: center">Why Choose Us</h2>
-      <div class="services-grid">
-        <div class="service-card gradient-bg">
-          <i
-            class="fas fa-calendar-check fa-2x"
-            style="margin-bottom: 10px"
-          ></i>
+    <!-- WHY CHOOSE US -->
+    <section class="global-section why-choose-section">
+      <h2>Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-calendar-check feature-icon"></i>
           <h3>150+ Events</h3>
-          <p>
-            Successfully executed a wide range of corporate, private, and
-            cultural events.
-          </p>
+          <p>Successfully executed events with precision and creativity.</p>
         </div>
-        <div class="service-card gradient-bg">
-          <i class="fas fa-users fa-2x" style="margin-bottom: 10px"></i>
-          <h3>100+ Trusted Clients</h3>
-          <p>
-            Our clients trust us for our commitment to excellence and
-            creativity.
-          </p>
+
+        <div class="feature-card">
+          <i class="fas fa-users feature-icon"></i>
+          <h3>100+ Clients</h3>
+          <p>Trusted by clients for excellence and seamless execution.</p>
         </div>
-        <div class="service-card gradient-bg">
-          <i class="fas fa-award fa-2x" style="margin-bottom: 10px"></i>
-          <h3>10+ Years Experience</h3>
-          <p>
-            Bringing a decade of expertise and passion to every project we
-            undertake.
-          </p>
+
+        <div class="feature-card">
+          <i class="fas fa-award feature-icon"></i>
+          <h3>10+ Years</h3>
+          <p>A decade of experience delivering premium events.</p>
         </div>
       </div>
     </section>
@@ -344,22 +228,23 @@
       </svg>
     </div>
 
-    <section class="leader-section">
-      <div class="leader-card">
-        <div class="leader-overlay">
-          <h3>Mr. Amitesh Raaz</h3>
-          <p>Founder & Director of AR event and wedding planner</p>
+        <!-- LEADER SECTION -->
+    <section class="global-section leader-section-wrapper">
+      <div class="leader-section">
+        <div class="leader-card">
+          <div class="leader-overlay">
+            <h3>Mr. Amitesh Raaz</h3>
+            <p>Founder & Director</p>
+          </div>
         </div>
-      </div>
-      <div class="leader-message">
-        <h2>A Message from Our Founder</h2>
-        <p>
-          "At AR event and wedding planner, every celebration is a story waiting
-          to unfold. Our mission is simple – to design experiences that are
-          memorable, seamless, and emotionally resonant. We don't just plan
-          events; we craft moments that inspire."
-        </p>
-        <p><strong>— Mr. Amitesh Raaz</strong></p>
+
+        <div class="leader-message">
+          <h2>A Message from Our Founder</h2>
+          <blockquote>
+            <p>"We don't just plan events — we create experiences that stay with you forever.At AR event and wedding planner, every celebration is a story waiting to unfold. Our mission is simple – to design experiences that are memorable, seamless, and emotionally resonant. We don't just plan events; we craft moments that inspire."</p>
+          </blockquote>
+          <p class="signature">Mr. Amitesh Raaz</p>
+        </div>
       </div>
     </section>
     <div class="wave-container">
@@ -372,21 +257,27 @@
       </svg>
     </div>
 
-    <section class="about-section">
-      <div class="about-content">
-        <h2>Our Vision</h2>
-        <p>
-          To be the leading event management company known for crafting
-          inspirational and extraordinary celebrations worldwide.
-        </p>
-        <h2>Our Mission</h2>
-        <p>
-          To deliver unforgettable experiences by combining innovation,
-          creativity, and strategic planning with flawless execution, making
-          every event a true success.
-        </p>
-      </div>
-    </section>
+        <!-- VISION & MISSION -->
+        <section class="global-section vision-mission-section">
+          <div class="vision-mission-container">
+            <div class="vision-box">
+              <h2>Our Vision</h2>
+              <p>
+                To be the leading event management company known for crafting
+                unforgettable experiences worldwide.
+              </p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="mission-box">
+              <h2>Our Mission</h2>
+              <p>
+                Deliver exceptional events through innovation, creativity, and flawless execution.
+              </p>
+            </div>
+          </div>
+        </section>
 
     <script>
       function toggleMobileNav() {

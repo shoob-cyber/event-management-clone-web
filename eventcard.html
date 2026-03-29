@@ -77,8 +77,12 @@
       crossorigin
     />
 
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./styles-premium.css" />
+    <!-- CSS Architecture - Unified Design System -->
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="stylesheet" href="./styles-premium.css">
 
     <!-- Font Awesome with font-display optimization -->
     <link
@@ -213,7 +217,7 @@
     </style>
   </head>
 
-  <body>
+  <body class="eventcard-page">
     
     <section class="hero-section-services">
       <header class="navbar">
@@ -512,7 +516,6 @@
         </div>
       </div>
     </footer>
-    <script src="scripts.js"></script>
     <script src="scripts-premium.js"></script>
   </body>
 </html>
