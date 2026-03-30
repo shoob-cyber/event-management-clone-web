@@ -632,6 +632,39 @@
   width: 100%;
 }
 
+.portfolio-hero .hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-hero .container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.portfolio-hero .container {
+  z-index: 3;
+}
+.portfolio-hero {
+  padding: 150px var(--space-lg) 100px;
+}
+.portfolio-hero.hero-section {
+  padding-top: 0 !important;
+}
+.portfolio-hero .hero-content {
+  margin-top: 80px; /* adjust based on navbar height */
+}
+
+
 /* ============================================
    TESTIMONIALS PAGE (.testimonials-page)
    ============================================ */
@@ -1325,8 +1358,6 @@
 .pricing-page .book-btn {
   margin-top: auto;
   align-self: center;
-  background: var(--primary-white);
-  color: var(--primary-dark);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-lg);
@@ -1334,6 +1365,7 @@
   font-weight: bold;
   text-decoration: none;
   transition: all var(--transition-fast);
+  
 }
 
 .pricing-page .book-btn:hover {
@@ -1440,11 +1472,10 @@
 }
 
 .contact-page .contact a {
-  color: var(--primary-dark);
+  color: var(--primary-grey);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: all var(--transition-fast);
-  border-bottom: 2px solid var(--primary-gold);
   padding-bottom: 2px;
 }
 
