@@ -383,16 +383,14 @@
                  FILTER SECTION
                  ========================================== -->
             <div class="filters-section fade-in-up" style="animation-delay: 0.2s;">
-                <label class="filter-label"><i class="fas fa-filter"></i> Filter by Category</label>
+                <h3 class="filter-heading">Explore Our Work</h3>
                 <div class="filters-container">
-                    <button class="filter-btn active" data-filter="all">All Events</button>
-                    <button class="filter-btn" data-filter="wedding">Weddings</button>
-                    <button class="filter-btn" data-filter="corporate">Corporate</button>
-                    <button class="filter-btn" data-filter="birthday">Birthdays</button>
-                    <button class="filter-btn" data-filter="award">Awards</button>
-                    <button class="filter-btn" data-filter="cultural">Cultural</button>
-                    <button class="filter-btn" data-filter="festival">Festivals</button>
-                </div>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="birthday">Birthdays</button>
+                <button class="filter-btn" data-filter="award">Awards</button>
+            </div>
             </div>
 
             <!-- ==========================================
@@ -656,39 +654,30 @@
     <script>
         // Portfolio Filter Logic
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                        // active button
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
 
-                    const filterValue = btn.getAttribute('data-filter');
+                        const filterValue = btn.getAttribute('data-filter');
 
-                    portfolioItems.forEach(item => {
-                        const itemCategory = item.getAttribute('data-category');
+                        portfolioItems.forEach(item => {
+                            const itemCategory = item.getAttribute('data-category');
 
-                        if (filterValue === 'all' || itemCategory === filterValue) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.classList.add('fade-in-up');
-                            }, 50);
-                        } else {
-                            item.classList.add('fade-out');
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                                item.classList.remove('fade-out');
-                            }, 300);
-                        }
+                            if (filterValue === 'all' || itemCategory === filterValue) {
+                                item.classList.remove('hide');
+                            } else {
+                                item.classList.add('hide');
+                            }
+                        });
+
                     });
                 });
             });
-
-            // Activate first filter
-            filterBtns[0].click();
-        });
 
         // Load More Portfolio
         function loadMorePortfolio() {

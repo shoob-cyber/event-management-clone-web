@@ -211,7 +211,7 @@ function setupPortfolioFilters() {
           item.style.display = 'block';
           item.classList.add('fade-in-up');
         } else {
-          item.style.display = 'none';
+          
           item.classList.remove('fade-in-up');
         }
       });
