@@ -71,21 +71,20 @@
          PORTFOLIO HERO
          ========================================== -->
     <section class="hero-section portfolio-hero">
-            <div class="hero-background" 
-                style="background-image: url('./assets/images/collage1.png');">
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Our Portfolio</h1>
-                <p class="hero-tagline">Celebrating the moments that matter most</p>
-            </div>
+        <div class="hero-background" style="background-image: url('./assets/images/collage1.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Our Portfolio</h1>
+            <p class="hero-tagline">Celebrating the moments that matter most</p>
+        </div>
+    </section>
 
-        </section>
     <!-- ==========================================
-         STATISTICS
+         PORTFOLIO CONTENT WRAPPER
          ========================================== -->
     <div class="portfolio-wrapper">
         <div class="container">
+            <!-- STATISTICS SECTION -->
             <div class="stats-section fade-in-up">
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -107,128 +106,159 @@
                 </div>
             </div>
 
-            <section class="gallery-section">
-                <h2 class="section-title">Explore Our Work</h2>
-
-                <!-- FILTERS (optional but clean) -->
+            <!-- PORTFOLIO FILTERS SECTION -->
+            <div class="filters-section fade-in-up">
+                <span class="filter-label">Filter by Category</span>
                 <div class="filters-container">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wedding">Wedding</button>
-                <button class="filter-btn" data-filter="prewedding">Pre Wedding</button>
-                <button class="filter-btn" data-filter="event">Event</button>
-                <button class="filter-btn" data-filter="film">Filmmaking</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="wedding">Wedding</button>
+                    <button class="filter-btn" data-filter="prewedding">Pre Wedding</button>
+                    <button class="filter-btn" data-filter="event">Event</button>
+                    <button class="filter-btn" data-filter="cultural">Cultural</button>
                 </div>
+            </div>
 
-                                <!-- GALLERY GRID -->
-                <div class="gallery-grid">
-                    <!-- Item 1 -->
-                    <div class="gallery-item" data-category="wedding">
-                        <img src="./assets/images/Wedding/wedding1.jpg" alt="Wedding Ceremony">
-                        <div class="gallery-content">
+            <!-- PORTFOLIO MASONRY GRID -->
+            <div class="masonry-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item fade-in-up" data-category="wedding">
+                    <img src="./assets/images/Wedding/118958618_3530372193668980_3318342923828697794_n.webp" alt="Wedding Ceremony" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
                             <h3>Wedding Ceremony</h3>
-                            <p>Timeless Moments</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="gallery-item" data-category="prewedding">
-                        <img src="./assets/images/Wedding/prewedding1.jpg" alt="Pre-Wedding">
-                        <div class="gallery-content">
-                            <h3>Pre-Wedding Shoot</h3>
-                            <p>Love Stories</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="gallery-item" data-category="event">
-                        <img src="./assets/images/Corporate/corporate1.jpg" alt="Corporate Event">
-                        <div class="gallery-content">
-                            <h3>Corporate Gala</h3>
-                            <p>Premium Events</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="gallery-item" data-category="wedding">
-                        <img src="./assets/images/Wedding/wedding2.jpg" alt="Wedding Reception">
-                        <div class="gallery-content">
-                            <h3>Wedding Reception</h3>
-                            <p>Grand Celebrations</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="gallery-item" data-category="event">
-                        <img src="./assets/images/Award/award1.jpg" alt="Award Ceremony">
-                        <div class="gallery-content">
-                            <h3>Award Ceremony</h3>
-                            <p>Memorable Moments</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="gallery-item" data-category="birthday">
-                        <img src="./assets/images/Birthday%20Party/birthday1.jpg" alt="Birthday Party">
-                        <div class="gallery-content">
-                            <h3>Birthday Celebration</h3>
-                            <p>Special Days</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 7 -->
-                    <div class="gallery-item" data-category="cultural">
-                        <img src="./assets/images/College/college1.jpg" alt="Cultural Event">
-                        <div class="gallery-content">
-                            <h3>Cultural Festival</h3>
-                            <p>Heritage & Tradition</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 8 -->
-                    <div class="gallery-item" data-category="wedding">
-                        <img src="./assets/images/Wedding/wedding3.jpg" alt="Wedding Decor">
-                        <div class="gallery-content">
-                            <h3>Wedding Decor</h3>
-                            <p>Elegant Design</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 9 -->
-                    <div class="gallery-item" data-category="event">
-                        <img src="./assets/images/Corporate/corporate2.jpg" alt="Business Event">
-                        <div class="gallery-content">
-                            <h3>Business Summit</h3>
-                            <p>Professional Excellence</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 10 -->
-                    <div class="gallery-item" data-category="prewedding">
-                        <img src="./assets/images/Wedding/prewedding2.jpg" alt="Engagement">
-                        <div class="gallery-content">
-                            <h3>Engagement Moment</h3>
-                            <p>Forever Starts Here</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 11 -->
-                    <div class="gallery-item" data-category="cultural">
-                        <img src="./assets/images/God/god1.jpg" alt="Religious Event">
-                        <div class="gallery-content">
-                            <h3>Religious Celebration</h3>
-                            <p>Sacred Occasions</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 12 -->
-                    <div class="gallery-item" data-category="wedding">
-                        <img src="./assets/images/Wedding/wedding4.jpg" alt="Wedding Details">
-                        <div class="gallery-content">
-                            <h3>Wedding Details</h3>
-                            <p>Perfection in Every Frame</p>
+                            <p class="category">Timeless Moments</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item fade-in-up" data-category="prewedding">
+                    <img src="./assets/images/Wedding/185321688_4231331373573055_8647493694388779079_n.webp" alt="Pre-Wedding" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Pre-Wedding Shoot</h3>
+                            <p class="category">Love Stories</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item fade-in-up" data-category="event">
+                    <img src="./assets/images/Corporate/34203674_1904152946290921_4467074722974138368_n.webp" alt="Corporate Event" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Corporate Gala</h3>
+                            <p class="category">Premium Events</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item fade-in-up" data-category="wedding">
+                    <img src="./assets/images/Wedding/90156374_3077445212295016_7878033746824265728_n.webp" alt="Wedding Reception" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Wedding Reception</h3>
+                            <p class="category">Grand Celebrations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item fade-in-up" data-category="event">
+                    <img src="./assets/images/Award/2.webp" alt="Award Ceremony" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Award Ceremony</h3>
+                            <p class="category">Memorable Moments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item fade-in-up" data-category="event">
+                    <img src="./assets/images/Birthday%20Party/1.webp" alt="Birthday Party" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Birthday Celebration</h3>
+                            <p class="category">Special Days</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 7 -->
+                <div class="portfolio-item fade-in-up" data-category="cultural">
+                    <img src="./assets/images/College/2.webp" alt="Cultural Event" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Cultural Festival</h3>
+                            <p class="category">Heritage & Tradition</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 8 -->
+                <div class="portfolio-item fade-in-up" data-category="wedding">
+                    <img src="./assets/images/Wedding/474687434_1095392799289305_5414725815205043615_n.webp" alt="Wedding Decor" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Wedding Decor</h3>
+                            <p class="category">Elegant Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 9 -->
+                <div class="portfolio-item fade-in-up" data-category="event">
+                    <img src="./assets/images/Corporate/44261275_2107308042642076_2160807358106697728_n.webp" alt="Business Event" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Business Summit</h3>
+                            <p class="category">Professional Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 10 -->
+                <div class="portfolio-item fade-in-up" data-category="prewedding">
+                    <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Engagement" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Engagement Moment</h3>
+                            <p class="category">Forever Starts Here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 11 -->
+                <div class="portfolio-item fade-in-up" data-category="cultural">
+                    <img src="./assets/images/God/56980837_2371553636217514_4391083063447126016_n.webp" alt="Religious Event" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Religious Celebration</h3>
+                            <p class="category">Sacred Occasions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 12 -->
+                <div class="portfolio-item fade-in-up" data-category="wedding">
+                    <img src="./assets/images/Wedding/475378087_1097857172376201_3599659323653489381_n.webp" alt="Wedding Details" class="portfolio-item-image">
+                    <div class="portfolio-item-overlay">
+                        <div class="portfolio-item-info">
+                            <h3>Wedding Details</h3>
+                            <p class="category">Perfection in Every Frame</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOAD MORE SECTION -->
+            <div class="load-more-section fade-in-up">
+                <button class="load-more-btn">Load More Projects</button>
+            </div>
+        </div>
+    </div>
 
     <!-- ==========================================
          FOOTER

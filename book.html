@@ -63,8 +63,8 @@
     <link rel="stylesheet" href="./common.css" />
     <link rel="stylesheet" href="./layout.css" />
     <link rel="stylesheet" href="./components.css" />
-    <link rel="stylesheet" href="./pages.css" />
     <link rel="stylesheet" href="./styles-premium.css" />
+    <link rel="stylesheet" href="./pages.css" />
 
     <!-- Font Awesome with font-display optimization -->
     <link
@@ -98,125 +98,6 @@
       type="font/woff2"
       crossorigin
     />
-
-    </style>
-      .form-wrapper {
-        position: relative;
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 50px 20px;
-      }
-
-      .form-container {
-        max-width: 550px;
-        width: 100%;
-        padding: 40px;
-        background-color: #ffffff;
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        z-index: 0;
-      }
-
-      .form-container h1 {
-        text-align: center;
-        font-size: 2.5em;
-        background: linear-gradient(45deg, #f4b86f, #a27158, #5c0469);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        margin-bottom: 30px;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 6px;
-        font-weight: 600;
-      }
-
-      input,
-      select,
-      textarea {
-        width: 90%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 2px solid #f4b86f;
-        border-radius: 8px;
-        font-size: 1em;
-        background-color: #fff5e9;
-      }
-
-      button {
-        padding: 12px 30px;
-        background: linear-gradient(45deg, #f4b86f, #a27158, #5c0469);
-        color: white;
-        border: none;
-        border-radius: 30px;
-        font-size: 1.1em;
-        font-weight: 600;
-        cursor: pointer;
-        width: 100%;
-      }
-
-      button:hover {
-        background: linear-gradient(45deg, #5c0469, #a27158, #f4b86f);
-      }
-
-      .card-top-left {
-        top: 10%;
-        left: 5%;
-        animation-delay: 0s;
-      }
-      .card-top-right {
-        top: 10%;
-        right: 5%;
-        animation-delay: 1s;
-      }
-      .card-bottom-left {
-        bottom: 10%;
-        left: 8%;
-        animation-delay: 2s;
-      }
-      .card-bottom-right {
-        bottom: 10%;
-        right: 8%;
-        animation-delay: 3s;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .form-wrapper {
-          padding: 40px 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 375px;
-        }
-
-        .form-container {
-          margin-right: 28px;
-          width: 80%;
-        }
-
-        .photo-card {
-          display: none;
-        }
-      }
-    </style>
   </head>
   <body class="book-page">
     <!-- ==========================================
@@ -263,7 +144,7 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <!-- Booking Form Section -->
-    <section class="hero-section">
+    <section class="global-section hero-section">
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <h1>Book Your Event</h1>
@@ -271,7 +152,6 @@
           We organize spectacular events that are unforgettable, creative, and
           flawless.
         </p>
-        <a href="./book.html" class="hero-btn">Plan Your Event</a>
       </div>
     </section>
 
@@ -321,117 +201,78 @@
       </div>
     </div>
 
-    <footer class="footer-enhanced">
-      <div class="footer-container">
-        <div class="footer-column footer-about">
-          <div class="footer-logo-section">
-            <div class="footer-icon-flex">
-              <div class="icon-1"></div>
-              <span class="line">|</span>
-              <div class="icon-2"></div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section fade-in-up" style="animation-delay: 0.1s;">
+                    <h4>AR Events & Wedding Planner</h4>
+                    <p style="color: var(--secondary-light); margin-bottom: var(--space-md);">
+                        Where Your Love Story Becomes a Grand Celebration
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Wedding Planning</a></li>
+                        <li><a href="#services">Corporate Events</a></li>
+                        <li><a href="#services">Birthday Parties</a></li>
+                        <li><a href="#services">Award Ceremonies</a></li>
+                        <li><a href="#services">Cultural Events</a></li>
+                        <li><a href="#services">College Festivals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.3s;">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
+                    <h4>Get In Touch</h4>
+                    <p style="color: var(--secondary-light);">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@arevents.in">info@arevents.in</a>
+                    </p>
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </p>
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Location:</strong><br>
+                        Muzaffarpur, Bihar, India
+                    </p>
+                </div>
             </div>
-          </div>
-          <p class="footer-description">
-            A Pioneer in the Event Management & Wedding Planner Field From
-            Muzaffarpur, Bihar. Creating unforgettable moments since 2013.
-          </p>
-          <div class="footer-social">
-            <a
-              href="https://wa.me/919006532324"
-              target="_blank"
-              aria-label="WhatsApp"
-              class="social-icon"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a
-              href="https://youtube.com/@areventandweddingplanner33"
-              target="_blank"
-              aria-label="YouTube"
-              class="social-icon"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/people/AR-event-and-wedding-planner/100064093007551/"
-              target="_blank"
-              aria-label="Facebook"
-              class="social-icon"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/ar_event_and_wedding_planner/"
-              target="_blank"
-              aria-label="Instagram"
-              class="social-icon"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
 
-        <div class="footer-column footer-services">
-          <h3 class="footer-heading">Our Services</h3>
-          <ul class="footer-list">
-            <li><a href="wedding-planning.html">Wedding Planning</a></li>
-            <li><a href="corporate-events.html">Corporate Events</a></li>
-            <li><a href="birthday-parties.html">Birthday Parties</a></li>
-            <li><a href="cultural-events.html">Cultural Events</a></li>
-            <li><a href="college-festivals.html">College Festivals</a></li>
-            <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
-          </ul>
+            <div class="footer-divider fade-in-up" style="animation-delay: 0.5s;">
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        &copy; 2024 AR Events & Wedding Planner. All rights reserved.
+                    </p>
+                    <div style="display: flex; gap: 2rem;">
+                        <a href="#" style="color: var(--secondary-light); font-size: 0.9rem;">Privacy Policy</a>
+                        <a href="#" style="color: var(--secondary-light); font-size: 0.9rem;">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-column footer-quick-links">
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul class="footer-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-column footer-contact">
-          <h3 class="footer-heading">Contact Us</h3>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span
-                >Nirala Nagar, P&T chowk<br />Muzaffarpur - 842001, Bihar</span
-              >
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <a href="tel:+919006532324">+91-9006532324</a>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:areventsol.2013@gmail.com"
-                >areventsol.2013@gmail.com</a
-              >
-            </li>
-            <li>
-              <i class="fas fa-clock"></i>
-              <span>Mon - Sun: 9:00 AM - 9:00 PM</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <p>© 2025 AR Event and Wedding Planner. All rights reserved.</p>
-          <p class="footer-developer">
-            Developed by
-            <a href="https://pixelatenest.com" target="_blank">Pixelate Nest</a>
-          </p>
-        </div>
-      </div>
     </footer>
+
+
 
     <script>
       function toggleMobileNav() {

@@ -1073,7 +1073,7 @@
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: all 0.4s ease;
+  transition: all 0.4s ease;  
 }
 
 .portfolio-item:hover {
@@ -1986,7 +1986,114 @@
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 25px rgba(209, 156, 74, 0.5);
 }
+/* ============================================
+   SERVICE PAGES FIX (ALL SERVICE PAGES)
+   ============================================ */
 
+.corporate-page .container,
+.cultural-page .container,
+.awards-page .container,
+.birthday-page .container,
+.college-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Fix section alignment */
+.corporate-page section,
+.cultural-page section,
+.awards-page section,
+.birthday-page section,
+.college-page section {
+  padding: 4rem 1rem;
+}
+
+/* Fix grid alignment if any cards */
+.corporate-page .services-grid,
+.cultural-page .services-grid,
+.awards-page .services-grid,
+.birthday-page .services-grid,
+.college-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ============================================
+   BOOK PAGE FIX
+   ============================================ */
+
+.book-page .form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.book-page .form-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+  background: var(--primary-white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Heading */
+.book-page .form-container h1 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--primary-dark);
+}
+
+/* Form elements */
+.book-page label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.book-page input,
+.book-page select,
+.book-page textarea {
+  width: 100%;  /* FIXED */
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--primary-cream);
+}
+
+/* Button */
+.book-page button {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary-gold));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.book-page button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.book-hero {
+  background: var(--bg-dark);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.book-hero h1 {
+  color: var(--primary-white);
+}
+
+.book-hero p {
+  color: var(--secondary-light);
+}
 /* Contact Page Responsive */
 @media (max-width: 1024px) {
   .contact-page .contact-card {
@@ -2453,7 +2560,6 @@
   color: white;
   padding: 150px var(--space-lg) 100px;
   text-align: center;
-  margin-top: 80px;
 }
 
 .portfolio-page .portfolio-hero h1 {
@@ -2469,7 +2575,6 @@
 }
 
 .portfolio-page .portfolio-wrapper {
-  padding: var(--space-3xl) var(--space-lg);
   background-color: var(--bg-light);
 }
 
