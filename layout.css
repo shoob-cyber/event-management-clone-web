@@ -4,11 +4,20 @@
    ============================================ */
 
 /* ============================================
+   CONTAINER - UNIVERSAL MAX-WIDTH WRAPPER
+   ============================================ */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+/* ============================================
    GLOBAL SECTIONS - CLASS-BASED (NOT element selectors!)
    ============================================ */
 .global-section {
   padding: var(--space-3xl) var(--space-lg);
-  max-width: 1800px;
   margin: 0 auto;
   position: relative;
 }
@@ -279,23 +288,7 @@
 /* ============================================
    CONTAINER SYSTEM
    ============================================ */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
 
-.container-lg {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
-
-.container-xl {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
 
 /* ============================================
    GRID SYSTEMS
