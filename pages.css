@@ -187,35 +187,23 @@
 /* About Container - 2 Column Layout */
 .about-page .about-container {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-3xl);
   align-items: center;
   padding: var(--space-2xl) 0;
 }
 
 .about-page .about-text {
-  color: #f5e6c8;
-  flex: 1;;
+  color: #fff;
 }
 
 .about-page .about-text h2 {
-  
-  color: var(--primary-white);
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: var(--space-lg);
-  letter-spacing: 0.02em;
-  line-height: 1.3;
+  color: var(--primary-gold);
 }
 
 .about-page .about-text p {
-  
-  font-style: italic;
-  color: var(--secondary-orange);
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: var(--space-lg);
-  letter-spacing: 0.5px;
+  color: #ccc;
+  font-style: italic; /* optional: remove italic */
 }
 
 .about-page .about-image {
@@ -231,6 +219,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   transition: transform var(--transition-slow);
 }
 
@@ -447,7 +436,7 @@
 .about-page .leader-card {
   flex: 0 1 auto;
   width: 100%;
-  max-width: 480px;
+  max-width: 750px;
   background-image: url("./assets/owner.jpeg");
   background-size: cover;
   background-position: center;
@@ -876,6 +865,7 @@
 .about-page .global-section {
   overflow-x: hidden;
   width: 100%;
+  background-color: var(--bg-dark) !important;
 }
 
 /* Wave container responsive */
