@@ -1140,7 +1140,7 @@ footer .container {
   .nav-links {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100;
     width: 100%;
     max-width: 350px;
     height: 100vh;
