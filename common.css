@@ -14,7 +14,7 @@
 }
 
 /* Icon Fonts - Font Awesome */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
 
 /* ============================================
    CSS VARIABLES - BRAND COLOR SYSTEM
@@ -815,6 +815,8 @@ nav {
    FOOTER
    ============================================ */
 footer {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-dark);
   color: var(--text-light);
   padding: var(--space-3xl) var(--space-lg) var(--space-lg);

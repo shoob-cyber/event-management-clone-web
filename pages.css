@@ -116,9 +116,9 @@
 /* Home Page Why Choose Section */
 .home-page .features-grid {
   display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 cards in one row */
-    gap: var(--space-lg);
-    justify-content: center;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards in one row */
+  gap: var(--space-lg);
+  justify-content: center;
 }
 
 /* Home Page Testimonials */
@@ -1469,8 +1469,9 @@
 .college-page .process-grid,
 .awards-page .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); /* 🔥 FIX */
   gap: 2rem;
+  justify-content: center; /* 🔥 IMPORTANT */
   position: relative;
   z-index: 1;
 }
@@ -2770,5 +2771,90 @@
 
   .portfolio-page .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============================================
+   INFINITE PHOTO SLIDER (SERVICE PAGES)
+   ============================================ */
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0; /* Prevents the box-shadows from getting cropped on hover */
+  position: relative;
+}
+
+/* Optional: Premium gradient fade effect on the left and right edges */
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-light) 0%, transparent 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-light) 0%, transparent 100%);
+}
+
+.slider-track {
+  display: flex;
+  gap: var(--space-lg);
+  width: max-content;
+  /* Left to Right animation. Change to 'slideRightToLeft' if you prefer standard marquee */
+  animation: slideLeftToRight 25s linear infinite;
+}
+
+/* Pauses the slider when the user hovers over a photo */
+.slider-container:hover .slider-track {
+  animation-play-state: paused;
+}
+
+/* Standardize card sizes inside the slider */
+.slider-track .portfolio-item {
+  width: 280px; /* Fixed width for slider items */
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* Keyframes for Left to Right */
+@keyframes slideLeftToRight {
+  0% {
+    /* Starts shifted entirely to the left */
+    transform: translateX(calc(-50% - (var(--space-lg) / 2)));
+  }
+  100% {
+    /* Ends at the original starting position */
+    transform: translateX(0);
+  }
+}
+
+/* Alternative Keyframes for Right to Left (Standard Marquee style) */
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - (var(--space-lg) / 2)));
+  }
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+  .slider-track .portfolio-item {
+    width: 240px; 
+  }
+  .slider-container::before,
+  .slider-container::after {
+    width: 60px; /* Smaller fade edges on mobile */
   }
 }
