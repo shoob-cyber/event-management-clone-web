@@ -792,9 +792,6 @@ section {
   position: relative;
 }
 
-section:nth-child(even) {
-  background-color: var(--bg-light);
-}
 
 section h2 {
   text-align: center;
@@ -2706,4 +2703,105 @@ footer {
   .scroll-indicator {
     display: none;
   }
+}
+/* ============================================
+   TRUE MASONRY GRID SYSTEM
+   ============================================ */
+
+.masonry-wrapper {
+    width: 100%;
+    padding: var(--space-lg) 0;
+}
+
+.masonry-grid {
+    /* This creates the columns */
+    column-count: 4; 
+    column-gap: 20px;
+    width: 100%;
+}
+
+.portfolio-item {
+    /* Critical for Masonry: prevents card from breaking across columns */
+    break-inside: avoid;
+    margin-bottom: 20px; 
+    
+    position: relative;
+    border-radius: 12px; /* Smoother rounding like screenshot */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #1a1a1a;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block; /* Removes bottom whitespace */
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+/* Hover Effects */
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Styling */
+.portfolio-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item-info h3 {
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+    margin: 0;
+    font-family: 'Kenao', sans-serif;
+}
+
+.portfolio-item-info p {
+    color: #fff;
+    font-size: 0.8rem;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Columns */
+@media (max-width: 1100px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-grid {
+        column-count: 2;
+        column-gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}
+
+/* Filtering logic adjustment */
+.portfolio-item.hide {
+    display: none;
 }

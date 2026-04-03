@@ -20,24 +20,11 @@
   overflow: hidden;
 }
 
-.feature-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  pointer-events: none;
-}
-
 .feature-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: var(--shadow-lg), var(--glow-gold);
   border-color: var(--primary-gold);
-  background: linear-gradient(135deg, var(--primary-white) 0%, rgba(209, 156, 74, 0.05) 100%);
+  background: black;
 }
 
 .feature-card:hover::before {
@@ -73,11 +60,19 @@
   letter-spacing: 0.01em;
 }
 
+.feature-card:hover h3 {
+  color: var(--primary-gold);
+  text-shadow: 0 0 10px rgba(209, 156, 74, 0.4);
+}
+
 .feature-card p {
   font-size: 0.95rem;
   color: var(--secondary-gray);
   line-height: 1.6;
   margin: 0;
+}
+.feature-card:hover p {
+  color: var(--text-light);
 }
 
 /* Service Card - Hover-based reveal */

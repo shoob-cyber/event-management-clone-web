@@ -1,71 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Portfolio - AR Events & Wedding Planner</title>
-    
+
     <!-- SEO -->
-    <meta name="description" content="Explore our portfolio of stunning events. From luxury weddings to corporate galas, see the magic we create.">
-    <meta name="keywords" content="event portfolio, wedding gallery, event gallery, corporate events, wedding photography">
-    
+    <meta
+      name="description"
+      content="Explore our portfolio of stunning events. From luxury weddings to corporate galas, see the magic we create."
+    />
+    <meta
+      name="keywords"
+      content="event portfolio, wedding gallery, event gallery, corporate events, wedding photography"
+    />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Favicon Support -->
-    <link rel="icon" type="image/svg+xml" href="./assets/logo2.svg">
-    <link rel="shortcut icon" href="./assets/logo2.svg">
-    
+    <link rel="icon" type="image/svg+xml" href="./assets/logo2.svg" />
+    <link rel="shortcut icon" href="./assets/logo2.svg" />
+
     <!-- CSS Architecture - Unified Design System -->
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./layout.css">
-    <link rel="stylesheet" href="./components.css">
-    <link rel="stylesheet" href="./pages.css">
-    <link rel="stylesheet" href="./styles-premium.css">
-</head>
-<body class="portfolio-page">
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./layout.css" />
+    <link rel="stylesheet" href="./components.css" />
+    <link rel="stylesheet" href="./pages.css" />
+    <link rel="stylesheet" href="./styles-premium.css" />
+  </head>
+  <body class="portfolio-page">
     <!-- ==========================================
          HEADER & NAVIGATION
          ========================================== -->
     <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logo2.svg" alt="AR Events Logo" class="logo-img">
-                </a>
-            </div>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/logo2.svg" alt="AR Events Logo" class="logo-img" />
+          </a>
+        </div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="wedding-planning.html">Wedding Planning</a></li>
-                        <li><a href="corporate-events.html">Corporate Events</a></li>
-                        <li><a href="birthday-parties.html">Birthday Parties</a></li>
-                        <li><a href="cultural-events.html">Cultural Events</a></li>
-                        <li><a href="college-festivals.html">College Festivals</a></li>
-                        <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
-                    </ul>
-                </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="mobile-book-btn"><a href="book.html" class="book-nav-link">Book Now</a></li>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="wedding-planning.html">Wedding Planning</a></li>
+              <li><a href="corporate-events.html">Corporate Events</a></li>
+              <li><a href="birthday-parties.html">Birthday Parties</a></li>
+              <li><a href="cultural-events.html">Cultural Events</a></li>
+              <li><a href="college-festivals.html">College Festivals</a></li>
+              <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
             </ul>
+          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-book-btn">
+            <a href="book.html" class="book-nav-link">Book Now</a>
+          </li>
+        </ul>
 
-            <a href="book.html" class="book-btn">Book Now</a>
-        </div>
+        <a href="book.html" class="book-btn">Book Now</a>
+      </div>
 
-        <!-- Hamburger Menu - Outside nav-container -->
-        <div class="hamburger-menu" id="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+      <!-- Hamburger Menu - Outside nav-container -->
+      <div class="hamburger-menu" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
@@ -75,193 +89,172 @@
          PORTFOLIO HERO
          ========================================== -->
     <section class="hero-section portfolio-hero">
-        <div class="hero-background" style="background-image: url('./assets/images/collage1.png');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Our Portfolio</h1>
-            <p class="hero-tagline">Celebrating the moments that matter most</p>
-        </div>
+      <!-- Video Background -->
+      <video class="hero-background-video" autoplay muted loop playsinline>
+        <source src="./assets/videos/video2.mp4" type="video/mp4" />
+        <!-- Fallback image if video doesn't load -->
+        <img src="./assets/images/collage1.png" alt="Portfolio Background" />
+      </video>
+
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Our Portfolio</h1>
+        <p class="hero-tagline">Celebrating the moments that matter most</p>
+      </div>
     </section>
 
     <!-- ==========================================
          PORTFOLIO CONTENT WRAPPER
          ========================================== -->
     <div class="portfolio-wrapper">
-        <div class="container">
-            <!-- STATISTICS SECTION -->
-            <div class="stats-section fade-in-up">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="150">150</div>
-                        <div class="stat-label">Events Created</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="10">10+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="100">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-target="50">50+</div>
-                        <div class="stat-label">Premium Vendors</div>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- STATISTICS SECTION -->
+        <div class="stats-section fade-in-up">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="150">150</div>
+              <div class="stat-label">Events Created</div>
             </div>
-
-            <!-- PORTFOLIO FILTERS SECTION -->
-            <div class="filters-section fade-in-up">
-                <span class="filter-label">Filter by Category</span>
-                <div class="filters-container">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="wedding">Wedding</button>
-                    <button class="filter-btn" data-filter="prewedding">Pre Wedding</button>
-                    <button class="filter-btn" data-filter="event">Event</button>
-                    <button class="filter-btn" data-filter="cultural">Cultural</button>
-                </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10">10+</div>
+              <div class="stat-label">Years Experience</div>
             </div>
-
-            <!-- PORTFOLIO MASONRY GRID -->
-            <div class="masonry-grid">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item fade-in-up" data-category="wedding">
-                    <img src="./assets/images/Wedding/118958618_3530372193668980_3318342923828697794_n.webp" alt="Wedding Ceremony" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Wedding Ceremony</h3>
-                            <p class="category">Timeless Moments</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item fade-in-up" data-category="prewedding">
-                    <img src="./assets/images/Wedding/185321688_4231331373573055_8647493694388779079_n.webp" alt="Pre-Wedding" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Pre-Wedding Shoot</h3>
-                            <p class="category">Love Stories</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item fade-in-up" data-category="event">
-                    <img src="./assets/images/Corporate/34203674_1904152946290921_4467074722974138368_n.webp" alt="Corporate Event" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Corporate Gala</h3>
-                            <p class="category">Premium Events</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 4 -->
-                <div class="portfolio-item fade-in-up" data-category="wedding">
-                    <img src="./assets/images/Wedding/90156374_3077445212295016_7878033746824265728_n.webp" alt="Wedding Reception" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Wedding Reception</h3>
-                            <p class="category">Grand Celebrations</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 5 -->
-                <div class="portfolio-item fade-in-up" data-category="event">
-                    <img src="./assets/images/Award/2.webp" alt="Award Ceremony" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Award Ceremony</h3>
-                            <p class="category">Memorable Moments</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 6 -->
-                <div class="portfolio-item fade-in-up" data-category="event">
-                    <img src="./assets/images/Birthday%20Party/1.webp" alt="Birthday Party" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Birthday Celebration</h3>
-                            <p class="category">Special Days</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 7 -->
-                <div class="portfolio-item fade-in-up" data-category="cultural">
-                    <img src="./assets/images/College/2.webp" alt="Cultural Event" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Cultural Festival</h3>
-                            <p class="category">Heritage & Tradition</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 8 -->
-                <div class="portfolio-item fade-in-up" data-category="wedding">
-                    <img src="./assets/images/Wedding/474687434_1095392799289305_5414725815205043615_n.webp" alt="Wedding Decor" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Wedding Decor</h3>
-                            <p class="category">Elegant Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 9 -->
-                <div class="portfolio-item fade-in-up" data-category="event">
-                    <img src="./assets/images/Corporate/44261275_2107308042642076_2160807358106697728_n.webp" alt="Business Event" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Business Summit</h3>
-                            <p class="category">Professional Excellence</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 10 -->
-                <div class="portfolio-item fade-in-up" data-category="prewedding">
-                    <img src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp" alt="Engagement" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Engagement Moment</h3>
-                            <p class="category">Forever Starts Here</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 11 -->
-                <div class="portfolio-item fade-in-up" data-category="cultural">
-                    <img src="./assets/images/God/56980837_2371553636217514_4391083063447126016_n.webp" alt="Religious Event" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Religious Celebration</h3>
-                            <p class="category">Sacred Occasions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Item 12 -->
-                <div class="portfolio-item fade-in-up" data-category="wedding">
-                    <img src="./assets/images/Wedding/475378087_1097857172376201_3599659323653489381_n.webp" alt="Wedding Details" class="portfolio-item-image">
-                    <div class="portfolio-item-overlay">
-                        <div class="portfolio-item-info">
-                            <h3>Wedding Details</h3>
-                            <p class="category">Perfection in Every Frame</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="100">100%</div>
+              <div class="stat-label">Client Satisfaction</div>
             </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">50+</div>
+              <div class="stat-label">Premium Vendors</div>
+            </div>
+          </div>
+        </div>
 
-            <!-- LOAD MORE SECTION -->
-            <div class="load-more-section fade-in-up">
-                <button class="load-more-btn">Load More Projects</button>
+        <!-- PORTFOLIO FILTERS SECTION -->
+        <div class="filters-section fade-in-up">
+          <span class="filter-label">Filter by Category</span>
+          <div class="filters-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="wedding">Wedding</button>
+            <button class="filter-btn" data-filter="prewedding">
+              Pre Wedding
+            </button>
+            <button class="filter-btn" data-filter="event">Event</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+          </div>
+        </div>
+
+        <!-- PORTFOLIO MASONRY GRID -->
+        <div class="masonry-wrapper">
+        <div class="masonry-grid" id="portfolioGrid">
+        
+        <div class="portfolio-item" data-category="event">
+            <img src="./assets/images/Political/speech_1.jpg" alt="Political Leader Speech">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Public Address</h3>
+                    <p class="category">Government & Political</p>
+                </div>
             </div>
         </div>
+
+        <div class="portfolio-item" data-category="event">
+            <img src="./assets/images/Events/singer_stage.jpg" alt="Live Concert Singer">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Kailash Kher Live</h3>
+                    <p class="category">Musical Event</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="cultural">
+            <img src="./assets/images/Awards/filmfest_1.jpg" alt="Bihar Wedding Filmfest">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Bihar Wedding Filmfest</h3>
+                    <p class="category">Filmmaking</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="wedding">
+            <img src="./assets/images/Wedding/bride_detail.jpg" alt="Bride Close Up">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Bridal Elegance</h3>
+                    <p class="category">Wedding</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="event">
+            <img src="./assets/images/Events/pawan_singh.jpg" alt="Pawan Singh Performance">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Pawan Singh Night</h3>
+                    <p class="category">Stage Show</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="prewedding">
+            <img src="./assets/images/Wedding/pre_wedding_forest.jpg" alt="Couple in Woods">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Forest Romance</h3>
+                    <p class="category">Pre-Wedding</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="event">
+            <img src="./assets/images/Events/yoga_day.jpg" alt="Yoga Day 2024">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>International Yoga Day</h3>
+                    <p class="category">Government Event</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="wedding">
+            <img src="./assets/images/Wedding/red_bride.jpg" alt="Traditional Wedding">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Royal Red Wedding</h3>
+                    <p class="category">Wedding</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="prewedding">
+            <img src="./assets/images/Wedding/tea_garden.jpg" alt="Tea Garden Couple">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Tea Garden Tales</h3>
+                    <p class="category">Pre-Wedding</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-category="cultural">
+            <img src="./assets/images/Filmmaking/poster_1.jpg" alt="Short Film Shoot">
+            <div class="portfolio-item-overlay">
+                <div class="portfolio-item-info">
+                    <h3>Cinematic Stories</h3>
+                    <p class="category">Filmmaking</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+        <!-- LOAD MORE SECTION -->
+        <div class="load-more-section fade-in-up">
+          <button class="load-more-btn">Load More Projects</button>
+        </div>
+      </div>
     </div>
 
     <!-- ==========================================
@@ -284,42 +277,47 @@
                 </div>
 
                 <div class="footer-section fade-in-up" style="animation-delay: 0.2s;">
-                    <h4>Quick Links</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#services">Wedding Planning</a></li>
+                        <li><a href="#services">Corporate Events</a></li>
+                        <li><a href="#services">Birthday Parties</a></li>
+                        <li><a href="#services">Award Ceremonies</a></li>
+                        <li><a href="#services">Cultural Events</a></li>
+                        <li><a href="#services">College Festivals</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section fade-in-up" style="animation-delay: 0.3s;">
-                    <h4>Services</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">Wedding Planning</a></li>
-                        <li><a href="#">Corporate Events</a></li>
-                        <li><a href="#">Birthday Parties</a></li>
-                        <li><a href="#">Cultural Events</a></li>
-                        <li><a href="#">Award Ceremonies</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section fade-in-up" style="animation-delay: 0.4s;">
-                    <h4>Contact</h4>
+                    <h4>Get In Touch</h4>
                     <p style="color: var(--secondary-light);">
-                        <i class="fas fa-envelope"></i> <a href="mailto:info@arevents.in" style="color: var(--secondary-light);">info@arevents.in</a>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@arevents.in">info@arevents.in</a>
                     </p>
-                    <p style="color: var(--secondary-light);">
-                        <i class="fas fa-phone"></i> <a href="tel:+919876543210" style="color: var(--secondary-light);">+91 98765 43210</a>
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
                     </p>
-                    <p style="color: var(--secondary-light);">
-                        <i class="fas fa-map-marker-alt"></i> Muzaffarpur, Bihar
+                    <p style="color: var(--secondary-light); margin-top: var(--space-md);">
+                        <strong>Location:</strong><br>
+                        Muzaffarpur, Bihar, India
                     </p>
                 </div>
             </div>
 
-            <div class="footer-divider fade-in-up" style="animation-delay: 0.5s;">
+            <div class="fade-in-up" style="animation-delay: 0.5s;">
                 <div class="footer-bottom">
                     <p class="footer-copyright">
                         &copy; 2024 AR Events & Wedding Planner. All rights reserved.
@@ -337,15 +335,24 @@
          STICKY CTA
          ========================================== -->
     <div class="sticky-cta" id="stickyCTA">
-        <a href="book.html" class="sticky-btn sticky-btn-book" title="Book Now">
-            <i class="fas fa-calendar-check"></i>
-        </a>
-        <a href="https://wa.me/919876543210" target="_blank" class="sticky-btn sticky-btn-whatsapp" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+919876543210" class="sticky-btn sticky-btn-call" title="Call">
-            <i class="fas fa-phone"></i>
-        </a>
+      <a href="book.html" class="sticky-btn sticky-btn-book" title="Book Now">
+        <i class="fas fa-calendar-check"></i>
+      </a>
+      <a
+        href="https://wa.me/919876543210"
+        target="_blank"
+        class="sticky-btn sticky-btn-whatsapp"
+        title="WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a
+        href="tel:+919876543210"
+        class="sticky-btn sticky-btn-call"
+        title="Call"
+      >
+        <i class="fas fa-phone"></i>
+      </a>
     </div>
 
     <!-- ==========================================
@@ -353,38 +360,37 @@
          ========================================== -->
     <script src="scripts-premium.js"></script>
     <script>
-        // Portfolio Filter Logic
-        document.addEventListener('DOMContentLoaded', () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-                filterBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
+      // Portfolio Filter Logic
+      document.addEventListener("DOMContentLoaded", () => {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // active button
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
 
-                        // active button
-                        filterBtns.forEach(b => b.classList.remove('active'));
-                        btn.classList.add('active');
+            const filterValue = btn.getAttribute("data-filter");
 
-                        const filterValue = btn.getAttribute('data-filter');
+            portfolioItems.forEach((item) => {
+              const itemCategory = item.getAttribute("data-category");
 
-                        portfolioItems.forEach(item => {
-                            const itemCategory = item.getAttribute('data-category');
-
-                            if (filterValue === 'all' || itemCategory === filterValue) {
-                                item.classList.remove('hide');
-                            } else {
-                                item.classList.add('hide');
-                            }
-                        });
-
-                    });
-                });
+              if (filterValue === "all" || itemCategory === filterValue) {
+                item.classList.remove("hide");
+              } else {
+                item.classList.add("hide");
+              }
             });
+          });
+        });
+      });
 
-        // Load More Portfolio
-        function loadMorePortfolio() {
-            const notification = document.createElement('div');
-            notification.innerHTML = '<i class="fas fa-check-circle"></i> Loading more events...';
-            notification.style.cssText = `
+      // Load More Portfolio
+      function loadMorePortfolio() {
+        const notification = document.createElement("div");
+        notification.innerHTML =
+          '<i class="fas fa-check-circle"></i> Loading more events...';
+        notification.style.cssText = `
                 position: fixed;
                 top: 100px;
                 right: 20px;
@@ -396,15 +402,16 @@
                 z-index: 2000;
                 animation: slideInRight 0.3s ease-out;
             `;
-            document.body.appendChild(notification);
+        document.body.appendChild(notification);
 
-            setTimeout(() => {
-                notification.innerHTML = '<i class="fas fa-check"></i> Coming soon! More portfolio items will be added.';
-                setTimeout(() => {
-                    notification.remove();
-                }, 2000);
-            }, 1500);
-        }
+        setTimeout(() => {
+          notification.innerHTML =
+            '<i class="fas fa-check"></i> Coming soon! More portfolio items will be added.';
+          setTimeout(() => {
+            notification.remove();
+          }, 2000);
+        }, 1500);
+      }
     </script>
-</body>
+  </body>
 </html>
