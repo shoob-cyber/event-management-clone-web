@@ -2858,3 +2858,117 @@
     width: 60px; /* Smaller fade edges on mobile */
   }
 }
+/* ============================================
+   BRANDED FAQ ACCORDION
+   Colors: Dark (#0F0F0F), Gold (#D19C4A / #DBB172)
+   Fonts: Kenao (Questions), Playfair Display (Answers)
+   ============================================ */
+.faq-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faq-item {
+  background: rgba(15, 15, 15, 0.6);
+  border: 1px solid rgba(209, 156, 74, 0.25);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.faq-item:hover {
+  border-color: rgba(209, 156, 74, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(209, 156, 74, 0.05);
+  transform: translateY(-2px);
+}
+
+.faq-item.active {
+  background: linear-gradient(135deg, rgba(15, 15, 15, 0.9) 0%, rgba(30, 30, 30, 0.8) 100%);
+  border-color: var(--primary-gold);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(209, 156, 74, 0.15);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  color: var(--primary-cream);
+  font-family: "Kenao", sans-serif; /* Primary Typography */
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.faq-question i {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item:hover .faq-question {
+  color: var(--primary-gold);
+}
+
+.faq-item.active .faq-question {
+  color: var(--primary-gold);
+  text-shadow: 0 0 10px rgba(209, 156, 74, 0.4);
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+  color: var(--primary-gold);
+}
+
+/* Smooth Height Animation using CSS Grid */
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer {
+  overflow: hidden;
+}
+
+.faq-answer p {
+  padding: 0 2rem 1.8rem 2rem;
+  margin: 0;
+  color: var(--secondary-light);
+  font-family: "Playfair Display", serif; /* Secondary Typography */
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-answer p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq-question {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  .faq-answer p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

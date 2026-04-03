@@ -1096,3 +1096,24 @@ window.AREvents = {
 };
 
 console.log('🎉 AR Events & Wedding Planner loaded successfully!');
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const currentItem = question.closest('.faq-item');
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Close all other open items
+            allItems.forEach(item => {
+                if (item !== currentItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked item
+            currentItem.classList.toggle('active');
+        });
+    });
+});
