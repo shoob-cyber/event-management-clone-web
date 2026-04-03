@@ -1117,3 +1117,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// ==========================================
+// ROBUST EDITORIAL CARD REVEAL
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the active class to trigger the CSS visible state
+                entry.target.classList.add('active');
+                // Stop observing once the card is revealed for performance
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { 
+        threshold: 0.05, // Trigger as soon as 5% of the card is visible
+        rootMargin: "0px 0px -50px 0px" 
+    });
+
+    // Select all cards and start observing them
+    const cards = document.querySelectorAll('.editorial-card');
+    cards.forEach(card => {
+        revealObserver.observe(card);
+    });
+});

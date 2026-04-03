@@ -1783,7 +1783,7 @@
 
 .contact-page .contact-div h1 {
   text-align: center;
-  color: var(--text-dark);
+  color: white;
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -2761,4 +2761,304 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
     font-size: 0.95rem;
   }
+}
+/* ============================================
+   FIXED EDITORIAL SERVICES STYLES
+   ============================================ */
+
+.editorial-services {
+    padding: 100px 0;
+    background: var(--bg-dark); /* Dark background to contrast white boxes */
+    overflow: hidden;
+}
+
+.editorial-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 150px;
+    width: 100%;
+}
+
+/* 1. INITIAL HIDDEN STATE (Starts invisible) */
+.editorial-image {
+    width: 70%;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-60px); /* Slides in from left */
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.editorial-content {
+    width: 45%;
+    background: #FFFFFF;
+    padding: 50px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(60px) translateY(20px); /* Slides in from right/bottom */
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s; /* Slight delay for content */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* Reverse Alignment (Zig-Zag) Logic */
+.editorial-card.reverse { flex-direction: row-reverse; }
+.editorial-card.reverse .editorial-image { transform: translateX(60px); }
+.editorial-card.reverse .editorial-content { 
+    left: 0; 
+    right: auto; 
+    transform: translateX(-60px) translateY(20px); 
+}
+
+/* 2. ACTIVE VISIBLE STATE (Triggered by JS on Scroll) */
+.editorial-card.active .editorial-image,
+.editorial-card.active .editorial-content {
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) !important;
+    visibility: visible !important;
+}
+
+/* Target the title only within the editorial section */
+.editorial-services .section-title {
+    color: var(--primary-white) !important;
+    text-align: center;
+    margin-bottom: 120px;
+    font-family: 'Kenao', serif; /* Optional: ensures it uses your premium font */
+}
+
+/* Header & Bullet Styling */
+.service-cat { color: var(--primary-gold); text-transform: uppercase; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 12px; }
+.editorial-content h3 { font-family: 'Kenao', serif; font-size: 2.4rem; margin-bottom: 15px; color: #1a1a1a; }
+.service-price { font-size: 1.1rem; color: #555; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 25px; margin-bottom: 30px; }
+.service-price span { color: #000; font-weight: 800; font-size: 1.6rem; }
+
+.feature-checklist { list-style: none; padding: 0; margin: 25px 0 40px 0; }
+.feature-checklist li { 
+    font-size: 1.05rem; 
+    color: #444; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 12px;
+    opacity: 0; /* Initially hidden for stagger animation */
+}
+
+/* ============================================
+   GOLDEN SHIMMER BUTTON ANIMATION
+   ============================================ */
+
+.btn-editorial {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden; /* Essential to contain the shine */
+    background: transparent;
+    border: 1px solid var(--primary-gold); /* Uses your brand gold */
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+/* The Golden Shine Effect */
+.btn-editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        transparent, 
+        rgba(219, 177, 114, 0.4), /* var(--primary-gold) with opacity */
+        transparent
+    );
+    transition: all 0.6s;
+    z-index: -1;
+}
+
+/* Hover States */
+.btn-editorial:hover {
+    color: #000;
+    box-shadow: 0 0 15px rgba(219, 177, 114, 0.3); /* Subtle gold glow */
+    transform: translateY(-2px);
+    border-color: var(--primary-dark);
+}
+
+.btn-editorial:hover::before {
+    left: 100%; /* Moves the shine across the button */
+}
+
+.btn-editorial i {
+    transition: transform 0.3s ease;
+    color: var(--primary-dark); /* Uses brand dark gold */
+}
+
+.btn-editorial:hover i {
+    transform: translateX(5px); /* Moves the arrow slightly */
+}
+
+/* Staggered Bullet Point Animation */
+.editorial-card.active .feature-checklist li { animation: fadeInUp 0.6s ease forwards; }
+.editorial-card.active .feature-checklist li:nth-child(1) { animation-delay: 0.8s; }
+.editorial-card.active .feature-checklist li:nth-child(2) { animation-delay: 1.0s; }
+.editorial-card.active .feature-checklist li:nth-child(3) { animation-delay: 1.2s; }
+.editorial-card.active .feature-checklist li:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cinematicHover {
+    0% {
+        transform: scale(1) rotateX(0deg) rotateY(-5deg);
+        filter: brightness(1) contrast(1);
+    }
+    50% {
+        filter: brightness(1.1) contrast(1.05);
+    }
+    100% {
+        transform: scale(1.12) rotateX(5deg) rotateY(0deg);
+        filter: brightness(1.15) contrast(1.1);
+    }
+}
+
+/* Interaction Hover Effect - Cinematic */
+.editorial-card:hover .editorial-image {
+    box-shadow: 0 30px 60px rgba(209, 156, 74, 0.3), 
+                0 0 30px rgba(209, 156, 74, 0.15);
+}
+
+.editorial-card:hover .editorial-image img { 
+    animation: cinematicHover 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    filter: brightness(1.15) saturate(1.1);
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+    .editorial-image { width: 100%; height: 450px; transform: none !important; opacity: 1 !important; }
+    .editorial-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .editorial-content { position: relative; width: 90%; margin: -100px auto 0; padding: 35px 25px; transform: none !important; opacity: 1 !important; }
+    .feature-checklist li { opacity: 1 !important; animation: none !important; }
+    .editorial-card { flex-direction: column !important; margin-bottom: 80px; }
+}
+
+.content-body {
+  display: flex; flex-wrap: nowrap;
+  gap: var(--space-lg);
+}
+/* ============================================
+   WHY CHOOSE US - DARK & PREMIUM
+   ============================================ */
+
+.why-choose-us.dark-theme {
+    padding: 100px 0;
+    background: #0f0f0f; /* Deep black/charcoal background */
+    text-align: center;
+}
+
+.why-choose-us.dark-theme .section-title {
+    color: var(--primary-white) !important;
+    margin-bottom: 15px;
+}
+
+.why-choose-us.dark-theme .section-subtitle {
+    color: var(--secondary-light);
+    opacity: 0.8;
+}
+
+.features-grid-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card-minimal {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    padding: 50px 35px;
+    background: #1a1a1a; /* Dark card background */
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(219, 177, 114, 0.1); /* Subtle gold border */
+}
+
+/* Fixed Center Icon Positioning */
+.feature-icon-circle {
+    width: 90px;
+    height: 90px;
+    background: rgba(219, 177, 114, 0.05); /* Very faint gold glow */
+    border: 1px solid var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto; 
+    transition: all 0.5s ease;
+}
+
+.feature-icon-circle i {
+    font-size: 2.2rem;
+    color: var(--primary-gold); 
+}
+
+.feature-card-minimal h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--primary-white);
+}
+
+.feature-card-minimal p {
+    color: #b0b0b0; /* Soft gray for readability on dark */
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Premium Dark Hover State */
+.feature-card-minimal:hover {
+    transform: translateY(-15px);
+    background: #222222;
+    border-color: var(--primary-gold);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.feature-card-minimal:hover .feature-icon-circle {
+    background: var(--primary-gold);
+    box-shadow: 0 0 20px rgba(219, 177, 114, 0.4);
+}
+
+.feature-card-minimal:hover .feature-icon-circle i {
+    color: #1a1a1a; /* Icon turns dark on gold background */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .features-grid-center {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
 }
