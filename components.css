@@ -701,7 +701,7 @@
 .services-zigzag-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 7rem; /* Creates breathing room between rows */
+    gap: 12rem; /* Creates breathing room between rows */
 }
 
 .zigzag-item {
@@ -743,7 +743,7 @@
 .zigzag-box {
     background-color: #FFFFFF;
     border: 2px solid var(--primary-gold, #D19C4A); /* Brand Gold */
-    padding: 3.5rem 3rem;
+    padding: 2.5rem 3rem;
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     border-radius: var(--radius-md);
@@ -784,7 +784,7 @@
 .zigzag-title {
     font-family: 'Kenao', sans-serif;
     color: var(--primary-gold, #D19C4A);
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
@@ -793,7 +793,6 @@
 .zigzag-desc {
     font-family: 'Playfair Display', serif;
     color: #444444; /* Dark contrast for readability on white */
-    font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
     position: relative;
@@ -801,11 +800,21 @@
 }
 
 .zigzag-btn {
-    position: relative;
-    z-index: 1;
-    font-family: 'Kenao', sans-serif;
-    letter-spacing: 1px;
-    padding: 12px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: "Kenao", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  outline: none;
 }
 
 /* Responsive adjustments for Tablets and Mobile */
