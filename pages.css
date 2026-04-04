@@ -972,6 +972,8 @@
 }
 .portfolio-hero {
   padding: 150px var(--space-lg) 100px;
+  position: relative;
+  z-index: 999;
 }
 .portfolio-hero.hero-section {
   padding-top: 0 !important;
@@ -1029,22 +1031,39 @@
   box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 .portfolio-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     to top,
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.2)
   );
   padding: 20px;
-  opacity: 1; 
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.portfolio-item-info {
+  text-align: center;
+  width: 100%;
+}
+
 .portfolio-item-info h3 {
   font-size: 1.1rem;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .portfolio-item-info .category {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.7);
+  margin: 8px 0 0 0;
 }
 .stats-section {
   background: transparent;
@@ -2197,26 +2216,34 @@
 
 .portfolio-page .load-more-section {
   text-align: center;
-  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
 }
 
 .portfolio-page .load-more-btn {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
-  color: white;
-  padding: var(--space-md) var(--space-xl);
-  border: none;
-  border-radius: var(--radius-lg);
-  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-gold) 0%, #e6c956 100%);
+  color: var(--primary-white);
+  padding: 16px 48px;
+  border: 2px solid var(--primary-gold);
+  border-radius: 50px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all var(--transition-fast);
-  font-size: 1rem;
+  transition: all var(--transition-base);
+  font-size: 1.05rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 25px rgba(209, 156, 74, 0.25);
+  display: inline-block;
 }
 
 .portfolio-page .load-more-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(209, 156, 74, 0.4);
+  background: linear-gradient(135deg, #e6c956 0%, var(--primary-gold) 100%);
+  border-color: #e6c956;
+}
+
+.portfolio-page .load-more-btn:active {
+  transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

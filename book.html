@@ -177,50 +177,358 @@
       </div>
     </section>
 
-    <div class="form-wrapper">
-      <div class="form-container">
-        <h1>Book Your Event</h1>
-        <form
-          id="bookingForm"
-          action="https://event-manage-agency-website.onrender.com/submit-booking"
-          method="POST"
-        >
-          <label for="name">Full Name*</label>
-          <input type="text" id="name" name="name" required />
+    <style>
+        /* Define Unique Kenao-Style Font locally, as it's not in the CSS variables */
+        @font-face {
+            font-family: 'Kenao';
+            src: url('fonts/Kenao-Regular.woff2') format('woff2'); /* Adjust path as needed */
+            font-weight: normal; font-style: normal;
+        }
 
-          <label for="email">Email Address*</label>
-          <input type="email" id="email" name="email" required />
+        .premium-booking-container {
+            position: relative;
+            background: #000;
+            color: var(--primary-white);
+            min-height: 100vh;
+            display: flex;
+            align-items: stretch; /* Stretch full height */
+            overflow: hidden;
+            border-bottom: 2px solid var(--primary-gold);
+        }
 
-          <label for="phone">Phone Number*</label>
-          <input type="tel" id="phone" name="phone" required />
+        /* Abstract Background Elements (The 'Crazy Design') */
+        .premium-booking-container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(209, 156, 74, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(209, 156, 74, 0.15) 0%, transparent 60%);
+            z-index: 1;
+        }
 
-          <label for="eventType">Type of Event*</label>
-          <select id="eventType" name="eventType" required>
-            <option value="">-- Select --</option>
-            <option value="Wedding">Wedding</option>
-            <option value="Birthday">Birthday</option>
-            <option value="Corporate">Corporate Event</option>
-            <option value="Spiritual">Spiritual Gathering</option>
-            <option value="Other">Other</option>
-          </select>
+        /* Crown Logo Element */
+        .booking-crazy-design::before {
+            content: url('path/to/your/crown-icon.png'); /* Replace with actual path to image_4f1345.png */
+            position: absolute;
+            right: 15%; top: 20%;
+            opacity: 0.2;
+            transform: scale(3.5) rotate(10deg);
+            filter: grayscale(1) sepia(100%) hue-rotate(10deg) saturate(200%);
+            z-index: 2;
+        }
 
-          <label for="date">Preferred Event Date*</label>
-          <input type="date" id="date" name="date" required />
+        /* Left Side: The Compact Booking Form */
+        .booking-content-wrapper {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            width: 100%;
+            padding: var(--space-xl) var(--space-lg);
+            align-items: center;
+        }
 
-          <label for="package">Select Package*</label>
-          <select id="package" name="package" required>
-            <option value="">-- Select --</option>
-            <option value="Silver">Silver</option>
-            <option value="Gold">Gold</option>
-            <option value="Platinum">Platinum</option>
-          </select>
+        .booking-form-section {
+            flex: 0 0 45%; /* Use 45% of width */
+            padding-right: var(--space-2xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-          <label for="message">Additional Notes</label>
-          <textarea id="message" name="message" rows="4"></textarea>
+        .booking-logo-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-3xl);
+            max-width: 150px;
+            width: 100%;
+        }
 
-          <button type="submit">Submit Booking</button>
-        </form>
-      </div>
+        .booking-logo {
+            margin-bottom: var(--space-xl);
+            max-width: 80px;
+        }
+
+        .booking-heading {
+            font-family: 'Kenao', serif;
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: var(--space-lg);
+            letter-spacing: 1px;
+        }
+
+        .booking-compact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2-column grid for basic info */
+            gap: var(--space-md);
+        }
+
+        /* Make larger inputs span full width */
+        .form-full-width { grid-column: span 2; }
+
+        .booking-compact-form label {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            color: var(--secondary-light);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .booking-compact-form input,
+        .booking-compact-form select,
+        .booking-compact-form textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(209, 156, 74, 0.2);
+            border-radius: var(--radius-lg);
+            color: var(--primary-white);
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            transition: var(--transition-base);
+        }
+
+        .booking-compact-form input:focus {
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 10px rgba(209, 156, 74, 0.3);
+            background: rgba(255, 255, 255, 0.06);
+            outline: none;
+        }
+
+        /* Shortened textarea height */
+        .booking-compact-form textarea { height: 100px; }
+
+        .form-actions {
+            grid-column: span 2;
+            text-align: right;
+            margin-top: var(--space-xl);
+        }
+
+        .btn-submit-booking {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        /* Right Side: Logo and Abstract Design Element */
+        .booking-crazy-design {
+            flex: 1; /* Take all remaining space */
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: var(--space-2xl);
+            padding-left: var(--space-2xl);
+        }
+
+        /* "A<R EVENTS" - Vertical, Oversized Typography */
+        .large-abstract-text {
+            font-family: 'Kenao', serif;
+            font-size: 15rem; /* Massive scale */
+            line-height: 0.75;
+            text-transform: uppercase;
+            writing-mode: vertical-rl; /* Rotate text */
+            transform: scale(2) rotate(-5deg); /* Distort further */
+            color: rgba(209, 156, 74, 0.15); /* Semi-transparent gold */
+            letter-spacing: -20px;
+            user-select: none;
+            position: relative;
+            margin-top: var(--space-2xl);
+        }
+
+        /* Ensure form feels premium/light with focus */
+        .booking-compact-form input:focus {
+            background-color: var(--primary-light);
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .booking-form-section { flex: 0 0 60%; }
+            .booking-crazy-design { 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .large-abstract-text { 
+                display: block;
+                font-size: 10rem;
+                position: relative;
+                right: auto;
+                bottom: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .booking-content-wrapper { flex-direction: column; padding: var(--space-lg); }
+            .booking-form-section { flex: 0 0 100%; padding-right: 0; }
+            .booking-crazy-design {
+                flex: 0 0 100%;
+                padding: var(--space-xl) 0;
+                border-top: 1px solid rgba(209, 156, 74, 0.2);
+            }
+            .booking-logo-right {
+                margin-bottom: var(--space-2xl);
+            }
+            .booking-heading { font-size: 2.2rem; }
+            .booking-compact-form { grid-template-columns: 1fr; }
+            .form-full-width { grid-column: span 1; }
+            .form-actions { grid-column: span 1; }
+        }
+
+      /* ============================================
+   RESPONSIVE LOGIC FOR BOOKING PAGE
+   ============================================ */
+
+/* TABLET VIEW (Laptops to Tablets) */
+@media (max-width: 1100px) {
+    .booking-form-section {
+        flex: 0 0 55%; /* Give the form more room */
+    }
+    
+    .large-abstract-text {
+        font-size: 10rem; /* Scale down the crazy text */
+        position: relative;
+        right: auto;
+    }
+}
+
+/* MOBILE LANDSCAPE / SMALL TABLETS */
+@media (max-width: 992px) {
+    .booking-content-wrapper {
+        flex-direction: column; /* Stack vertically */
+        padding-top: var(--space-3xl);
+    }
+
+    .booking-form-section {
+        flex: 0 0 100%;
+        padding-right: 0;
+        text-align: center; /* Center text for mobile balance */
+    }
+
+    .booking-logo-right {
+        margin: 0 auto var(--space-2xl) auto;
+    }
+
+    /* Show the Logo and Abstract Design on smaller screens in column */
+    .booking-crazy-design {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space-xl) 0;
+        border-top: 1px solid rgba(209, 156, 74, 0.2);
+    }
+
+    .large-abstract-text {
+        display: block;
+        font-size: 8rem;
+        position: relative;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+/* PHONE VIEW (Standard Smartphones) */
+@media (max-width: 576px) {
+    .booking-heading {
+        font-size: 2.2rem; /* Smaller heading for mobile */
+        line-height: 1.2;
+    }
+
+    .booking-compact-form {
+        grid-template-columns: 1fr; /* Force single column for all inputs */
+        gap: var(--space-sm);
+    }
+
+    .form-full-width, 
+    .form-actions {
+        grid-column: span 1; /* Reset grid spans */
+    }
+
+    .booking-compact-form input, 
+    .booking-compact-form select, 
+    .booking-compact-form textarea {
+        padding: 14px; /* Larger touch targets for fingers */
+        font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    }
+
+    .btn-submit-booking {
+        width: 100%; /* Full width button on mobile */
+        justify-content: center;
+    }
+
+    .booking-logo-right {
+        max-width: 120px;
+    }
+
+    .large-abstract-text {
+        font-size: 6rem;
+    }
+}
+    </style>
+</head>
+<body class="bg-dark">
+
+    <div class="premium-booking-container">
+        
+        <div class="booking-content-wrapper container">
+            
+            <div class="booking-form-section">
+                
+                <h1 class="booking-heading">Start<br>Your Story.</h1>
+                
+                <form class="booking-compact-form" action="booking_confirmation.html" method="post">
+                    
+                    <div>
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" placeholder="E.g., Jane Doe" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" placeholder="jane.doe@email.com" required>
+                    </div>
+                    
+                    <div class="form-full-width">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+                    </div>
+
+                    <div class="form-full-width">
+                        <label for="event-type">What type of event are you planning?</label>
+                        <select id="event-type" name="event-type">
+                            <option value="">Select an Event</option>
+                            <option value="wedding">Wedding Celebration</option>
+                            <option value="reception">Reception Dinner</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="other">Other Unique Celebration</option>
+                        </select>
+                    </div>
+
+                    <div class="form-full-width">
+                        <label for="message">Brief Notes (Optional)</label>
+                        <textarea id="message" name="message" placeholder="A few details about your vision..."></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-submit-booking">
+                            Schedule a Consultation <i class="fas fa-calendar-alt"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="booking-crazy-design">
+                <a href="index.html" class="booking-logo-right">
+                    <img src="assets/logo2.svg" alt="AR Events & Wedding Planner Logo"> </a>
+                <div class="large-abstract-text">A R<br>E v e n t s</div>
+            </div>
+            
+        </div>
+        
     </div>
 
     <footer class="footer-premium">
