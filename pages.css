@@ -2589,7 +2589,7 @@
 
 .editorial-content {
     width: 45%;
-    background: #FFFFFF;
+    background:var(--bg-dark);
     padding: 50px;
     border-radius: 12px;
     position: absolute;
@@ -2634,8 +2634,10 @@
 
 .feature-checklist { list-style: none; padding: 0; margin: 25px 0 40px 0; }
 .feature-checklist li { 
+    font-family: "Playfair Display", serif;
+    font-weight: 100 !important;
     font-size: 1.05rem; 
-    color: #444; 
+    color: var(--primary-white); 
     display: flex; 
     align-items: center; 
     gap: 12px; 
@@ -2643,15 +2645,11 @@
     opacity: 0; 
 }
 
-
-
-
-
 .btn-editorial {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    color: #000;
+    color: var(--primary-gold);
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
