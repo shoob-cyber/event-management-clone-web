@@ -1,7 +1,7 @@
 let isMobileNavOpen = false;
 
 function toggleMobileNav(e) {
-  // Prevent event from bubbling
+  
   if (e) {
     e.stopPropagation();
   }
@@ -14,7 +14,7 @@ function toggleMobileNav(e) {
   const overlay = document.querySelector(".mobile-menu-overlay");
   const body = document.body;
   
-  // Check if elements exist before manipulating
+  
   if (!navLinks || !hamburger) {
     console.error("[toggleMobileNav] ERROR: Required elements not found!", { navLinks: !!navLinks, hamburger: !!hamburger });
     return;
@@ -23,12 +23,12 @@ function toggleMobileNav(e) {
   navLinks.classList.toggle("active", isMobileNavOpen);
   hamburger.classList.toggle("active", isMobileNavOpen);
   
-  // Toggle overlay
+  
   if (overlay) {
     overlay.classList.toggle("active", isMobileNavOpen);
   }
   
-  // Prevent body scroll when menu is open
+  
   if (isMobileNavOpen) {
     body.style.overflow = "hidden";
   } else {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navbar: !!navbar 
   });
 
-  // Add hamburger click listener
+  
   if (hamburger) {
     console.log("[DOMContentLoaded] Attaching hamburger click listener...");
     hamburger.addEventListener("click", (e) => {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Handle dropdown menus on mobile
+  
   const dropdowns = document.querySelectorAll(".dropdown");
   
   dropdowns.forEach((dropdown) => {
@@ -103,13 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Close navigation when a link is clicked (but not dropdown toggles)
+  
   navLinksContainer.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (e) => {
       const parentDropdown = link.closest(".dropdown");
       const dropdownMenu = parentDropdown ? parentDropdown.querySelector(".dropdown-menu") : null;
       
-      // Don't close if it's a dropdown toggle in mobile mode
+      
       if (!parentDropdown || !dropdownMenu || !dropdownMenu.contains(e.target)) {
         if (isMobileNavOpen && !parentDropdown) {
           closeMobileNav();
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Close mobile nav when clicking on overlay
+  
   if (overlay) {
     overlay.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -126,16 +126,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
-  // Close mobile nav when clicking outside (only if menu is actually open)
+  
   document.addEventListener("click", (e) => {
-    // Only close if the click is NOT on navbar, hamburger, or nav-links
+    
     if (isMobileNavOpen && navbar && !navbar.contains(e.target) && !navLinksContainer.contains(e.target)) {
       console.log("[Outside Click] Closing menu due to click outside", { target: e.target });
       closeMobileNav();
     }
   });
 
-  // Close menu on window resize (when going from mobile to desktop)
+  
   window.addEventListener("resize", () => {
     console.log("[Window Resize] Width:", window.innerWidth, "Nav open:", isMobileNavOpen);
     if (window.innerWidth > 768 && isMobileNavOpen) {

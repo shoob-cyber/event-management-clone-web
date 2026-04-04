@@ -13,7 +13,7 @@ async function runPurge() {
     safelist: [/^active/, /^show/, /^open/, /^fade/]
   });
 
-  // create folder if not exists
+  
   if (!fs.existsSync("purged-css")) {
     fs.mkdirSync("purged-css");
   }

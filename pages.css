@@ -1,11 +1,3 @@
-/* ============================================
-   AR EVENTS & WEDDING PLANNER - PAGE SPECIFIC STYLES
-   SCOPED with body class selectors ONLY
-   ============================================ */
-
-/* ============================================
-   HOMEPAGE SPECIFIC STYLES (.home-page)
-   ============================================ */
 
 .home-page .story {
   display: grid;
@@ -32,6 +24,7 @@
   gap: 1.5rem;
   margin: 2rem 0;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home-page .highlight {
@@ -104,7 +97,7 @@
   transform: scale(1.05);
 }
 
-/* Home Page Services Grid */
+
 .home-page .services-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -113,17 +106,17 @@
   width: 100%;
 }
 
-/* Home Page Why Choose Section */
+
 .home-page .features-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards in one row */
+  grid-template-columns: repeat(5, 1fr); 
   gap: var(--space-lg);
   justify-content: center;
 }
 
-/* Home Page Testimonials */
+
 .home-page .what-clients-say-section {
-  background: #1a1a1a;
+  background: var(--bg-dark);
   position: relative;
   overflow: hidden;
 }
@@ -152,25 +145,6 @@
   filter: blur(80px);
 }
 
-.home-page .what-clients-say-section h2 {
-  color: var(--primary-white) !important;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  font-size: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  position: relative;
-  z-index: 1;
-}
-
-.home-page .what-clients-description {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 1rem;
-  line-height: 1.8;
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 1;
-}
-
 .home-page .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -180,11 +154,11 @@
   z-index: 1;
 }
 
-/* ============================================
-   ABOUT PAGE (.about-page)
-   ============================================ */
 
-/* About Container - 2 Column Layout */
+
+
+
+
 .about-page .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -203,7 +177,7 @@
 
 .about-page .about-text p {
   color: #ccc;
-  font-style: italic; /* optional: remove italic */
+  font-style: italic; 
 }
 
 .about-page .about-image {
@@ -227,7 +201,7 @@
   transform: scale(1.05);
 }
 
-/* About Button */
+
 .about-page .btn {
   display: inline-block;
   padding: 1rem 2rem;
@@ -253,7 +227,7 @@
   color: var(--primary-white);
 }
 
-/* Why Choose Us Section */
+
 .about-page .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -315,7 +289,7 @@
   display: inline-block;
 }
 
-/* Vision & Mission Section */
+
 .about-page .vision-mission-section {
   background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(81, 81, 82, 0.85) 100%);
   padding: var(--space-3xl) var(--space-lg);
@@ -390,7 +364,7 @@
   opacity: 0.6;
 }
 
-/* Vision & Mission Responsive */
+
 @media (max-width: 1024px) {
   .about-page .vision-mission-container {
     grid-template-columns: 1fr;
@@ -423,7 +397,7 @@
   }
 }
 
-/* Leader Section */
+
 .about-page .leader-section {
   display: flex;
   flex-wrap: wrap;
@@ -521,7 +495,7 @@
   margin-top: var(--space-lg);
 }
 
-/* Enhanced About Page Responsive - Tablet (1024px) */
+
 @media (max-width: 1024px) {
   .about-page {
     overflow-x: hidden;
@@ -605,7 +579,7 @@
   }
 }
 
-/* Enhanced About Page Mobile (768px) */
+
 @media (max-width: 768px) {
   .about-page {
     overflow-x: hidden;
@@ -732,7 +706,7 @@
   }
 }
 
-/* Extra Small Screens (480px) */
+
 @media (max-width: 480px) {
   .about-page {
     overflow-x: hidden;
@@ -855,20 +829,20 @@
   }
 }
 
-/* Overflow Prevention - All Screens */
+
 .about-page {
   overflow-x: hidden;
   width: 100%;
 }
 
-/* Prevent horizontal scroll on sections */
+
 .about-page .global-section {
   overflow-x: hidden;
   width: 100%;
   background-color: var(--bg-dark) !important;
 }
 
-/* Wave container responsive */
+
 .about-page .wave-container {
   overflow-x: hidden;
   width: 100vw;
@@ -887,7 +861,7 @@
   height: auto;
 }
 
-/* Hero section responsive on all screens */
+
 .about-page .hero-section {
   overflow-x: hidden;
   width: 100%;
@@ -899,7 +873,7 @@
   background-position: center;
 }
 
-/* Ensure about container doesn't overflow */
+
 .about-page .about-container {
   width: 100%;
   box-sizing: border-box;
@@ -917,7 +891,7 @@
   display: block;
 }
 
-/* Feature cards don't overflow */
+
 .about-page .features-grid {
   width: 100%;
   box-sizing: border-box;
@@ -929,7 +903,7 @@
   overflow: hidden;
 }
 
-/* Leader section responsive */
+
 .about-page .leader-section {
   width: 100%;
   box-sizing: border-box;
@@ -947,7 +921,7 @@
   overflow-x: hidden;
 }
 
-/* Vision mission responsive */
+
 .about-page .vision-mission-container {
   width: 100%;
   box-sizing: border-box;
@@ -961,9 +935,9 @@
   overflow: hidden;
 }
 
-/* ============================================
-   PORTFOLIO & GALLERY PAGES
-   ============================================ */
+
+
+
 
 .portfolio-page .portfolio-grid,
 .gallery-page .portfolio-grid {
@@ -1003,7 +977,7 @@
   padding-top: 0 !important;
 }
 .portfolio-hero .hero-content {
-  margin-top: 80px; /* adjust based on navbar height */
+  margin-top: 80px; 
 }
 
 .filters-container {
@@ -1061,7 +1035,7 @@
     rgba(0,0,0,0.2)
   );
   padding: 20px;
-  opacity: 1; /* ALWAYS visible */
+  opacity: 1; 
 }
 .portfolio-item-info h3 {
   font-size: 1.1rem;
@@ -1087,9 +1061,9 @@
 }
 
 
-/* ============================================
-   TESTIMONIALS PAGE (.testimonials-page)
-   ============================================ */
+
+
+
 
 .testimonials-page .testimonials-grid {
   display: grid;
@@ -1097,201 +1071,6 @@
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
 }
-
-/* ============================================
-   SERVICE PAGES - FEATURE CARDS
-   ============================================ */
-
-.wedding-page .features-grid,
-.corporate-page .features-grid,
-.birthday-page .features-grid,
-.cultural-page .features-grid,
-.college-page .features-grid,
-.awards-page .features-grid {
-   display: grid;
-    grid-template-columns: repeat(6, 1fr); /* force 6 cards in one row */
-    gap: var(--space-lg);
-    justify-content: center;
-    align-items: stretch;
-}
-
-.wedding-page .feature-card,
-.corporate-page .feature-card,
-.birthday-page .feature-card,
-.cultural-page .feature-card,
-.college-page .feature-card,
-.awards-page .feature-card {
-  height: 100px;
-  text-align: center;
-  padding: var(--space-md);
-  background: linear-gradient(135deg, var(--primary-white) 0%, rgba(255, 255, 255, 0.95) 100%);
-  border-radius: var(--radius-2xl);
-  box-shadow: 
-    0 10px 40px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  transition: all var(--transition-base);
-  border: 1px solid rgba(209, 156, 74, 0.2);
-  position: relative;
-  overflow: hidden;
-  min-height: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 215px;
-  min-width: 215px;
-  flex: 0 0 auto;
-  padding: 1.5rem;
-}
-
-.wedding-page .feature-card::after,
-.corporate-page .feature-card::after,
-.birthday-page .feature-card::after,
-.cultural-page .feature-card::after,
-.college-page .feature-card::after,
-.awards-page .feature-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(209, 156, 74, 0.15) 0%, rgba(209, 156, 74, 0.05) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  pointer-events: none;
-}
-
-.wedding-page .feature-card::before,
-.corporate-page .feature-card::before,
-.birthday-page .feature-card::before,
-.cultural-page .feature-card::before,
-.college-page .feature-card::before,
-.awards-page .feature-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.wedding-page .feature-card:hover,
-.corporate-page .feature-card:hover,
-.birthday-page .feature-card:hover,
-.cultural-page .feature-card:hover,
-.college-page .feature-card:hover,
-.awards-page .feature-card:hover {
-  transform: translateY(-15px) scale(1.03);
-  box-shadow: 
-    0 30px 60px rgba(209, 156, 74, 0.2),
-    0 0 40px rgba(209, 156, 74, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
-  border-color: var(--primary-gold);
-  background: linear-gradient(135deg, var(--primary-white) 0%, rgba(209, 156, 74, 0.05) 100%);
-}
-
-.wedding-page .feature-card:hover::after,
-.corporate-page .feature-card:hover::after,
-.birthday-page .feature-card:hover::after,
-.cultural-page .feature-card:hover::after,
-.college-page .feature-card:hover::after,
-.awards-page .feature-card:hover::after {
-  opacity: 1;
-}
-
-.wedding-page .feature-card:hover::before,
-.corporate-page .feature-card:hover::before,
-.birthday-page .feature-card:hover::before,
-.cultural-page .feature-card:hover::before,
-.college-page .feature-card:hover::before,
-.awards-page .feature-card:hover::before {
-  opacity: 0.3;
-  animation: shine 0.6s ease-out;
-}
-
-.wedding-page .feature-icon,
-.corporate-page .feature-icon,
-.birthday-page .feature-icon,
-.cultural-page .feature-icon,
-.college-page .feature-icon,
-.awards-page .feature-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--space-md);
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-gold) 100%);
-  border-radius: var(--radius-xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: var(--primary-white);
-  transition: all var(--transition-base);
-  box-shadow: 
-    0 12px 30px rgba(209, 156, 74, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
-}
-
-.wedding-page .feature-icon i,
-.corporate-page .feature-icon i,
-.birthday-page .feature-icon i,
-.cultural-page .feature-icon i,
-.college-page .feature-icon i,
-.awards-page .feature-icon i {
-  transform: translateY(1px);
-}
-
-.wedding-page .feature-card:hover .feature-icon,
-.corporate-page .feature-card:hover .feature-icon,
-.birthday-page .feature-card:hover .feature-icon,
-.cultural-page .feature-card:hover .feature-icon,
-.college-page .feature-card:hover .feature-icon,
-.awards-page .feature-card:hover .feature-icon {
-  transform: scale(1.25) rotate(8deg);
-  box-shadow: 
-    0 16px 40px rgba(209, 156, 74, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-
-.wedding-page .feature-card h3,
-.corporate-page .feature-card h3,
-.birthday-page .feature-card h3,
-.cultural-page .feature-card h3,
-.college-page .feature-card h3,
-.awards-page .feature-card h3 {
-  color: var(--primary-dark);
-  margin-bottom: var(--space-lg);
-  margin-top: var(--space-md);
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.025em;
-  line-height: 1.5;
-  font-family: "Kenao", serif;
-}
-
-.wedding-page .feature-card p,
-.corporate-page .feature-card p,
-.birthday-page .feature-card p,
-.cultural-page .feature-card p,
-.college-page .feature-card p,
-.awards-page .feature-card p {
-  color: var(--secondary-gray);
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.7;
-  letter-spacing: 0.015em;
-}
-
-/* ============================================
-   SERVICE PAGES - WHY CHOOSE & PROCESS
-   ============================================ */
-
 .wedding-page .why-choose-section,
 .corporate-page .why-choose-section,
 .birthday-page .why-choose-section,
@@ -1363,106 +1142,6 @@
   line-height: 1.8;
   letter-spacing: 0.01em;
 }
-
-/* Service Pages Process Section */
-.wedding-page .process-section,
-.corporate-page .process-section,
-.birthday-page .process-section,
-.cultural-page .process-section,
-.college-page .process-section,
-.awards-page .process-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.wedding-page .process-section::before,
-.corporate-page .process-section::before,
-.birthday-page .process-section::before,
-.cultural-page .process-section::before,
-.college-page .process-section::before,
-.awards-page .process-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(209, 156, 74, 0.05) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.wedding-page .process-section h2,
-.corporate-page .process-section h2,
-.birthday-page .process-section h2,
-.cultural-page .process-section h2,
-.college-page .process-section h2,
-.awards-page .process-section h2 {
-  font-size: clamp(2.5rem, 7vw, 4rem);
-  color: var(--text-light);
-  text-align: center;
-  margin-bottom: var(--space-lg);
-  letter-spacing: -0.02em;
-  text-shadow: 0 2px 10px rgba(209, 156, 74, 0.3);
-  background: linear-gradient(135deg, var(--text-light) 0%, var(--primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.wedding-page .process-section h2::after,
-.corporate-page .process-section h2::after,
-.birthday-page .process-section h2::after,
-.cultural-page .process-section h2::after,
-.college-page .process-section h2::after,
-.awards-page .process-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-gold), var(--primary-light), transparent);
-  margin: 1rem auto 0;
-}
-
-.wedding-page .process-description,
-.corporate-page .process-description,
-.birthday-page .process-description,
-.cultural-page .process-description,
-.college-page .process-description,
-.awards-page .process-description {
-  animation: fadeInUp 0.8s ease-out;
-  font-size: 1.1rem;
-  color: var(--secondary-light);
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--space-3xl);
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-  transition: color var(--transition-base);
-}
-
-.wedding-page .process-grid,
-.corporate-page .process-grid,
-.birthday-page .process-grid,
-.cultural-page .process-grid,
-.college-page .process-grid,
-.awards-page .process-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); /* 🔥 FIX */
-  gap: 2rem;
-  justify-content: center; /* 🔥 IMPORTANT */
-  position: relative;
-  z-index: 1;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN FOR ALL PAGES
-   ============================================ */
 
 @media (max-width: 1024px) {
   .home-page .story {
@@ -1561,9 +1240,9 @@
   }
 }
 
-/* ============================================
-   PRICING PAGE (.pricing-page)
-   ============================================ */
+
+
+
 
 .pricing-page .pricing-section {
   padding: var(--space-2xl) var(--space-lg);
@@ -1610,7 +1289,7 @@
   margin: 0 auto;
 }
 
-/* Pricing Card Base Styles */
+
 .pricing-page .pricing-card {
   color: var(--primary-white);
   border-radius: var(--radius-2xl);
@@ -1627,7 +1306,7 @@
   overflow: hidden;
 }
 
-/* Staggered animation delays */
+
 .pricing-page .pricing-card:nth-child(1) {
   animation-delay: 0s;
 }
@@ -1664,23 +1343,23 @@
   animation-delay: 1.6s;
 }
 
-/* Hover Effect */
+
 .pricing-page .pricing-card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Silver Card */
+
 .pricing-page .silver-card {
   background: linear-gradient(135deg, #dcdcdc 0%, #a8a8a8 100%);
 }
 
-/* Gold Card */
+
 .pricing-page .gold-card {
   background: linear-gradient(135deg, #ffcc33 0%, #ff9900 100%);
 }
 
-/* Platinum Card */
+
 .pricing-page .platinum-card {
   background: linear-gradient(135deg, #00cc99 0%, #006633 100%);
 }
@@ -1734,7 +1413,7 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Pricing Page Responsive */
+
 @media (max-width: 1024px) {
   .pricing-page .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1771,9 +1450,9 @@
   }
 }
 
-/* ============================================
-   CONTACT PAGE (.contact-page)
-   ============================================ */
+
+
+
 
 .contact-page .contact-div {
   padding: var(--space-2xl) var(--space-lg);
@@ -1843,7 +1522,7 @@
   transform: translateX(2px);
 }
 
-/* Contact CTA Section */
+
 .contact-page .cta-section {
   text-align: center;
   padding: var(--space-2xl) var(--space-lg);
@@ -1898,9 +1577,9 @@
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 25px rgba(209, 156, 74, 0.5);
 }
-/* ============================================
-   SERVICE PAGES FIX (ALL SERVICE PAGES)
-   ============================================ */
+
+
+
 
 .corporate-page .container,
 .cultural-page .container,
@@ -1910,7 +1589,7 @@
   margin: 0 auto;
 }
 
-/* Fix section alignment */
+
 .corporate-page section,
 .cultural-page section,
 .awards-page section,
@@ -1919,7 +1598,7 @@
   padding: 4rem 1rem;
 }
 
-/* Fix grid alignment if any cards */
+
 .corporate-page .services-grid,
 .cultural-page .services-grid,
 .awards-page .services-grid,
@@ -1930,9 +1609,9 @@
   gap: 2rem;
 }
 
-/* ============================================
-   BOOK PAGE FIX
-   ============================================ */
+
+
+
 
 .book-page .form-wrapper {
   min-height: 100vh;
@@ -1951,14 +1630,14 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* Heading */
+
 .book-page .form-container h1 {
   text-align: center;
   margin-bottom: var(--space-xl);
   color: var(--primary-dark);
 }
 
-/* Form elements */
+
 .book-page label {
   font-weight: 600;
   margin-bottom: 6px;
@@ -1968,7 +1647,7 @@
 .book-page input,
 .book-page select,
 .book-page textarea {
-  width: 100%;  /* FIXED */
+  width: 100%;  
   padding: 12px;
   margin-bottom: 18px;
   border: 1px solid var(--border-light);
@@ -1976,7 +1655,7 @@
   background: var(--primary-cream);
 }
 
-/* Button */
+
 .book-page button {
   width: 100%;
   padding: 14px;
@@ -1992,7 +1671,7 @@
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
-/* Contact Page Responsive */
+
 @media (max-width: 1024px) {
   .contact-page .contact-card {
     grid-template-columns: 1fr;
@@ -2061,7 +1740,7 @@
   font-size: 14px;
   letter-spacing: 0.5px;
 
-  border-radius: 50px; /* 🔥 pill shape */
+  border-radius: 50px; 
   text-decoration: none;
 
   transition: all 0.3s ease;
@@ -2077,7 +1756,7 @@
 .hero-btn {
   backdrop-filter: blur(10px);
 }
-/* Enhanced About Page Responsive - Tablet (1024px) */
+
 @media (max-width: 1024px) {
   .about-page .about-text h2 {
     font-size: 2rem;
@@ -2129,7 +1808,7 @@
   }
 }
 
-/* Enhanced About Page Mobile (768px) */
+
 @media (max-width: 768px) {
   .about-page .about-text h2 {
     font-size: 1.8rem;
@@ -2211,7 +1890,7 @@
   }
 }
 
-/* Extra Small Screens (480px) */
+
 @media (max-width: 480px) {
   .about-page .about-text h2 {
     font-size: 1.5rem;
@@ -2295,7 +1974,7 @@
     font-size: 0.85rem;
   }
 }
-/* MOBILE HERO FIX */
+
 @media (max-width: 768px) {
 
   .home-page .hero-section {
@@ -2335,18 +2014,18 @@
   }
 
 }
-/* ============================================
-   GALLERY PAGE (.gallery-page)
-   ============================================ */
 
-/* Hover Effects */
 
-/* Overlay Content */
 
-/* Responsive */
-/* ============================================
-   PORTFOLIO PAGE SPECIFIC STYLES
-   ============================================ */
+
+
+
+
+
+
+
+
+
 
 .portfolio-page .portfolio-hero {
   background: linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(81, 81, 82, 0.6) 100%);
@@ -2563,18 +2242,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* ============================================
-   INFINITE PHOTO SLIDER (SERVICE PAGES)
-   ============================================ */
+
+
+
 
 .slider-container {
   width: 100%;
   overflow: hidden;
-  padding: 20px 0; /* Prevents the box-shadows from getting cropped on hover */
+  padding: 20px 0; 
   position: relative;
 }
 
-/* Optional: Premium gradient fade effect on the left and right edges */
+
 .slider-container::before,
 .slider-container::after {
   content: "";
@@ -2588,47 +2267,47 @@
 
 .slider-container::before {
   left: 0;
-  background: linear-gradient(to right, var(--bg-light) 0%, transparent 100%);
+  background: linear-gradient(to right, var(--bg-dark) 0%, transparent 100%);
 }
 
 .slider-container::after {
   right: 0;
-  background: linear-gradient(to left, var(--bg-light) 0%, transparent 100%);
+  background: linear-gradient(to left, var(--bg-dark) 0%, transparent 100%);
 }
 
 .slider-track {
   display: flex;
   gap: var(--space-lg);
   width: max-content;
-  /* Left to Right animation. Change to 'slideRightToLeft' if you prefer standard marquee */
+  
   animation: slideLeftToRight 25s linear infinite;
 }
 
-/* Pauses the slider when the user hovers over a photo */
+
 .slider-container:hover .slider-track {
   animation-play-state: paused;
 }
 
-/* Standardize card sizes inside the slider */
+
 .slider-track .portfolio-item {
-  width: 280px; /* Fixed width for slider items */
+  width: 280px; 
   flex-shrink: 0;
   margin: 0;
 }
 
-/* Keyframes for Left to Right */
+
 @keyframes slideLeftToRight {
   0% {
-    /* Starts shifted entirely to the left */
+    
     transform: translateX(calc(-50% - (var(--space-lg) / 2)));
   }
   100% {
-    /* Ends at the original starting position */
+    
     transform: translateX(0);
   }
 }
 
-/* Alternative Keyframes for Right to Left (Standard Marquee style) */
+
 @keyframes slideRightToLeft {
   0% {
     transform: translateX(0);
@@ -2638,21 +2317,21 @@
   }
 }
 
-/* Responsive adjustment for mobile screens */
+
 @media (max-width: 768px) {
   .slider-track .portfolio-item {
     width: 240px; 
   }
   .slider-container::before,
   .slider-container::after {
-    width: 60px; /* Smaller fade edges on mobile */
+    width: 60px; 
   }
 }
-/* ============================================
-   BRANDED FAQ ACCORDION
-   Colors: Dark (#0F0F0F), Gold (#D19C4A / #DBB172)
-   Fonts: Kenao (Questions), Playfair Display (Answers)
-   ============================================ */
+
+
+
+
+
 .faq-wrapper {
   display: flex;
   flex-direction: column;
@@ -2689,7 +2368,7 @@
   background: transparent;
   border: none;
   color: var(--primary-cream);
-  font-family: "Kenao", sans-serif; /* Primary Typography */
+  font-family: "Kenao", sans-serif; 
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.03em;
@@ -2718,7 +2397,7 @@
   color: var(--primary-gold);
 }
 
-/* Smooth Height Animation using CSS Grid */
+
 .faq-answer-wrapper {
   display: grid;
   grid-template-rows: 0fr;
@@ -2737,7 +2416,7 @@
   padding: 0 2rem 1.8rem 2rem;
   margin: 0;
   color: var(--secondary-light);
-  font-family: "Playfair Display", serif; /* Secondary Typography */
+  font-family: "Playfair Display", serif; 
   font-size: 1.05rem;
   line-height: 1.8;
   letter-spacing: 0.01em;
@@ -2751,7 +2430,7 @@
   transform: translateY(0);
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .faq-question {
     padding: 1.2rem 1.5rem;
@@ -2762,13 +2441,13 @@
     font-size: 0.95rem;
   }
 }
-/* ============================================
-   FIXED EDITORIAL SERVICES STYLES
-   ============================================ */
+
+
+
 
 .editorial-services {
     padding: 100px 0;
-    background: var(--bg-dark); /* Dark background to contrast white boxes */
+    background: var(--bg-dark); 
     overflow: hidden;
 }
 
@@ -2780,14 +2459,14 @@
     width: 100%;
 }
 
-/* 1. INITIAL HIDDEN STATE (Starts invisible) */
+
 .editorial-image {
     width: 70%;
     height: 600px;
     border-radius: 15px;
     overflow: hidden;
     opacity: 0;
-    transform: translateX(-60px); /* Slides in from left */
+    transform: translateX(-60px); 
     transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -2807,12 +2486,12 @@
     right: 0;
     z-index: 10;
     opacity: 0;
-    transform: translateX(60px) translateY(20px); /* Slides in from right/bottom */
-    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s; /* Slight delay for content */
+    transform: translateX(60px) translateY(20px); 
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s; 
     box-shadow: 0 25px 60px rgba(0,0,0,0.2);
 }
 
-/* Reverse Alignment (Zig-Zag) Logic */
+
 .editorial-card.reverse { flex-direction: row-reverse; }
 .editorial-card.reverse .editorial-image { transform: translateX(60px); }
 .editorial-card.reverse .editorial-content { 
@@ -2821,7 +2500,7 @@
     transform: translateX(-60px) translateY(20px); 
 }
 
-/* 2. ACTIVE VISIBLE STATE (Triggered by JS on Scroll) */
+
 .editorial-card.active .editorial-image,
 .editorial-card.active .editorial-content {
     opacity: 1 !important;
@@ -2829,15 +2508,15 @@
     visibility: visible !important;
 }
 
-/* Target the title only within the editorial section */
+
 .editorial-services .section-title {
     color: var(--primary-white) !important;
     text-align: center;
     margin-bottom: 120px;
-    font-family: 'Kenao', serif; /* Optional: ensures it uses your premium font */
+    font-family: 'Kenao', serif; 
 }
 
-/* Header & Bullet Styling */
+
 .service-cat { color: var(--primary-gold); text-transform: uppercase; font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 12px; }
 .editorial-content h3 { font-family: 'Kenao', serif; font-size: 2.4rem; margin-bottom: 15px; color: #1a1a1a; }
 .service-price { font-size: 1.1rem; color: #555; border-bottom: 1px solid rgba(0,0,0,0.08); padding-bottom: 25px; margin-bottom: 30px; }
@@ -2851,12 +2530,12 @@
     align-items: center; 
     gap: 12px; 
     margin-bottom: 12px;
-    opacity: 0; /* Initially hidden for stagger animation */
+    opacity: 0; 
 }
 
-/* ============================================
-   GOLDEN SHIMMER BUTTON ANIMATION
-   ============================================ */
+
+
+
 
 .btn-editorial {
     display: inline-flex;
@@ -2870,14 +2549,14 @@
     letter-spacing: 1px;
     padding: 10px 20px;
     position: relative;
-    overflow: hidden; /* Essential to contain the shine */
+    overflow: hidden; 
     background: transparent;
-    border: 1px solid var(--primary-gold); /* Uses your brand gold */
+    border: 1px solid var(--primary-gold); 
     transition: all 0.4s ease;
     z-index: 1;
 }
 
-/* The Golden Shine Effect */
+
 .btn-editorial::before {
     content: '';
     position: absolute;
@@ -2888,35 +2567,35 @@
     background: linear-gradient(
         120deg, 
         transparent, 
-        rgba(219, 177, 114, 0.4), /* var(--primary-gold) with opacity */
+        rgba(219, 177, 114, 0.4), 
         transparent
     );
     transition: all 0.6s;
     z-index: -1;
 }
 
-/* Hover States */
+
 .btn-editorial:hover {
     color: #000;
-    box-shadow: 0 0 15px rgba(219, 177, 114, 0.3); /* Subtle gold glow */
+    box-shadow: 0 0 15px rgba(219, 177, 114, 0.3); 
     transform: translateY(-2px);
     border-color: var(--primary-dark);
 }
 
 .btn-editorial:hover::before {
-    left: 100%; /* Moves the shine across the button */
+    left: 100%; 
 }
 
 .btn-editorial i {
     transition: transform 0.3s ease;
-    color: var(--primary-dark); /* Uses brand dark gold */
+    color: var(--primary-dark); 
 }
 
 .btn-editorial:hover i {
-    transform: translateX(5px); /* Moves the arrow slightly */
+    transform: translateX(5px); 
 }
 
-/* Staggered Bullet Point Animation */
+
 .editorial-card.active .feature-checklist li { animation: fadeInUp 0.6s ease forwards; }
 .editorial-card.active .feature-checklist li:nth-child(1) { animation-delay: 0.8s; }
 .editorial-card.active .feature-checklist li:nth-child(2) { animation-delay: 1.0s; }
@@ -2942,7 +2621,7 @@
     }
 }
 
-/* Interaction Hover Effect - Cinematic */
+
 .editorial-card:hover .editorial-image {
     box-shadow: 0 30px 60px rgba(209, 156, 74, 0.3), 
                 0 0 30px rgba(209, 156, 74, 0.15);
@@ -2953,7 +2632,7 @@
     filter: brightness(1.15) saturate(1.1);
 }
 
-/* Responsive Fixes */
+
 @media (max-width: 992px) {
     .editorial-image { width: 100%; height: 450px; transform: none !important; opacity: 1 !important; }
     .editorial-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -2966,13 +2645,13 @@
   display: flex; flex-wrap: nowrap;
   gap: var(--space-lg);
 }
-/* ============================================
-   WHY CHOOSE US - DARK & PREMIUM
-   ============================================ */
+
+
+
 
 .why-choose-us.dark-theme {
     padding: 100px 0;
-    background: #0f0f0f; /* Deep black/charcoal background */
+    background: #0f0f0f; 
     text-align: center;
 }
 
@@ -2999,17 +2678,17 @@
     min-width: 280px;
     max-width: 380px;
     padding: 50px 35px;
-    background: #1a1a1a; /* Dark card background */
+    background: #1a1a1a; 
     border-radius: 20px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 1px solid rgba(219, 177, 114, 0.1); /* Subtle gold border */
+    border: 1px solid rgba(219, 177, 114, 0.1); 
 }
 
-/* Fixed Center Icon Positioning */
+
 .feature-icon-circle {
     width: 90px;
     height: 90px;
-    background: rgba(219, 177, 114, 0.05); /* Very faint gold glow */
+    background: rgba(219, 177, 114, 0.05); 
     border: 1px solid var(--primary-gold);
     border-radius: 50%;
     display: flex;
@@ -3032,12 +2711,12 @@
 }
 
 .feature-card-minimal p {
-    color: #b0b0b0; /* Soft gray for readability on dark */
+    color: #b0b0b0; 
     line-height: 1.8;
     font-size: 1rem;
 }
 
-/* Premium Dark Hover State */
+
 .feature-card-minimal:hover {
     transform: translateY(-15px);
     background: #222222;
@@ -3051,10 +2730,10 @@
 }
 
 .feature-card-minimal:hover .feature-icon-circle i {
-    color: #1a1a1a; /* Icon turns dark on gold background */
+    color: #1a1a1a; 
 }
 
-/* Responsive Fix */
+
 @media (max-width: 768px) {
     .features-grid-center {
         flex-direction: column;
