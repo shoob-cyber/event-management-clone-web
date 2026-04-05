@@ -1113,10 +1113,10 @@ document.addEventListener("DOMContentLoaded", () => {
     revealObserver.observe(card);
   });
 });
-/* Universal expandable/clamp behavior for long descriptions (Desktop & Mobile) */
+
 (function () {
   function setupClamps() {
-    // 1. We tell the script to look for the "clamp-text" class we added to your HTML
+    
     const selectors = [
       ".clamp-text", 
       ".zigzag-desc",
@@ -1130,17 +1130,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     selectors.forEach((sel) => {
       document.querySelectorAll(sel).forEach((el) => {
-        // Remove existing toggle button if there is one
+        
         const next = el.nextElementSibling;
         if (next && next.classList && next.classList.contains("clamp-toggle")) {
           next.remove();
         }
 
-        // 2. Here is where the JS applies your new CSS class!
+        
         el.classList.add("universal-clamp");
         el.classList.remove("expanded");
 
-        // 3. Measure the text and create the button if it's too long
+        
         requestAnimationFrame(() => {
           const isTruncated = el.scrollHeight > el.clientHeight + 2; 
           if (isTruncated) {
@@ -1161,11 +1161,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Run the script when the page loads or resizes
+  
   document.addEventListener("DOMContentLoaded", () => {
     setupClamps();
     window.addEventListener("orientationchange", setupClamps);
-    // Note: requires the 'debounce' function which is already higher up in your scripts-premium.js file
+    
     window.addEventListener("resize", debounce(setupClamps, 150));
   });
 })();

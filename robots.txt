@@ -1,5 +1,5 @@
 # Robots.txt for Event Management Clone
-# Website: https://event-management-clone-web.vercel.app/
+# Website: https://arevents.in/
 
 User-agent: *
 Allow: /
@@ -20,7 +20,7 @@ Allow: /assets/*.jpg
 Allow: /assets/*.png
 
 # Sitemap location
-Sitemap: https://event-management-clone-web.vercel.app/sitemap.xml
+Sitemap: https://arevents.in/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

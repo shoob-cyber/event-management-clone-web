@@ -259,14 +259,6 @@
   transition: all var(--transition-fast);
 }
 
-.sticky-btn-book {
-  background: linear-gradient(
-    135deg,
-    var(--primary-dark) 0%,
-    var(--primary-gold) 100%
-  );
-}
-
 .sticky-btn-whatsapp {
   background: #25d366;
 }
@@ -288,11 +280,6 @@
   display: grid;
   gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
 }
 
 @media (max-width: 1024px) {
@@ -345,22 +332,8 @@
     font-size: 1.2rem;
   }
 }
-/* Mobile-only clamp for long card descriptions */
-@media (max-width: 768px) {
-  .mobile-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: relative;
-  }
 
-  .mobile-clamp.expanded {
-    -webkit-line-clamp: unset;
-    display: block;
-    overflow: visible;
-  }
+@media (max-width: 768px) {
 
   .clamp-toggle {
     display: block;
@@ -374,16 +347,5 @@
     padding: 0;
     text-align: right;
     font-size: 0.95rem;
-  }
-
-  /* Zigzag-specific overrides (higher specificity than .zigzag-btn in components.css) */
-  .zigzag-box .zigzag-btn {
-    display: block;
-    margin: 0.75rem auto 0;
-  }
-
-  /* Make clamp toggle right aligned within zigzag boxes specifically */
-  .zigzag-box .clamp-toggle {
-    text-align: right;
   }
 }
