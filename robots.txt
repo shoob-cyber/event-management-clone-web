@@ -1,4 +1,4 @@
-# Robots.txt for Event Management Clone
+# Robots.txt for AR Events & Wedding Planner
 # Website: https://arevents.in/
 
 User-agent: *
@@ -10,6 +10,8 @@ Disallow: /.git/
 Disallow: /.vscode/
 Disallow: /update_*.py
 Disallow: /assets/fonts/
+Disallow: /fix-seo.ps1
+Disallow: /seo-audit-report.html
 
 # Allow all images and assets
 Allow: /assets/images/
@@ -21,6 +23,9 @@ Allow: /assets/*.png
 
 # Sitemap location
 Sitemap: https://arevents.in/sitemap.xml
+
+# AI Content Policy
+# See /llms.txt for AI-specific content guidelines
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
