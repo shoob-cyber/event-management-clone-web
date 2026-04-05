@@ -1781,7 +1781,7 @@ section h2 {
   font-size: 1.25rem;
   margin-bottom: 20px;
   opacity: 0.8;
-  color:#ffffff
+  color: #ffffff
 }
 
 .address-item {
@@ -1875,7 +1875,8 @@ section h2 {
   font-size: 0.85rem;
   color: #FFFFFF;
 }
-.footer-bottom-premium p{
+
+.footer-bottom-premium p {
   font-size: 1rem;
   color: #FFFFFF;
   font-family: "Playfair Display", serif;
@@ -2218,7 +2219,7 @@ section h2 {
     overflow: hidden;
     transform: none;
     box-shadow: none;
-    background: var(--primary-cream);
+    background: rgb(0, 0, 0);
     transition: all var(--transition-fast);
   }
 
@@ -2529,7 +2530,7 @@ section h2 {
     grid-template-columns: 1fr;
     gap: var(--space-md);
     display: flex;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .feature-box {

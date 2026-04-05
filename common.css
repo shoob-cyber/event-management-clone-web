@@ -220,11 +220,9 @@ nav {
 }
 
 .btn-book-nav {
-  background: linear-gradient(
-    135deg,
-    var(--primary-dark) 0%,
-    var(--primary-gold) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--primary-dark) 0%,
+      var(--primary-gold) 100%);
   color: var(--primary-white);
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-full);
@@ -246,11 +244,9 @@ nav {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.2) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 70%);
   transform: scale(0);
   transition: transform 0.5s ease;
 }
@@ -318,7 +314,7 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgba(15, 15, 15, 0.95);
+  background: rgb(0, 0, 0);
   border-radius: 15px;
   padding: 10px;
   list-style: none;
@@ -347,18 +343,23 @@ nav {
 .dropdown-menu li:nth-child(1) {
   animation-delay: 0.05s;
 }
+
 .dropdown-menu li:nth-child(2) {
   animation-delay: 0.1s;
 }
+
 .dropdown-menu li:nth-child(3) {
   animation-delay: 0.15s;
 }
+
 .dropdown-menu li:nth-child(4) {
   animation-delay: 0.17s;
 }
+
 .dropdown-menu li:nth-child(5) {
   animation-delay: 0.17s;
 }
+
 .dropdown-menu li:nth-child(6) {
   animation-delay: 0.2s;
 }
@@ -400,11 +401,9 @@ nav {
   right: 8px;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(209, 156, 74, 0.12) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(209, 156, 74, 0.12) 0%,
+      transparent 100%);
   border-radius: 8px;
   opacity: 0;
   transition: opacity 0.2s ease-out;
@@ -434,6 +433,7 @@ nav {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -444,6 +444,7 @@ nav {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -455,6 +456,7 @@ nav {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -462,16 +464,19 @@ nav {
 }
 
 @keyframes glowPulse {
+
   0%,
   100% {
     box-shadow: 0 0 20px rgba(209, 156, 74, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(209, 156, 74, 0.6);
   }
 }
 
 @keyframes navbarGlow {
+
   0%,
   100% {
     box-shadow:
@@ -479,6 +484,7 @@ nav {
       0 0 40px rgba(209, 156, 74, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
+
   50% {
     box-shadow:
       0 20px 60px rgba(0, 0, 0, 0.35),
@@ -491,6 +497,7 @@ nav {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -501,6 +508,7 @@ nav {
     opacity: 0;
     transform: translateY(-20px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -512,6 +520,7 @@ nav {
     opacity: 0;
     transform: translateX(-12px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -522,6 +531,7 @@ nav {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(180deg);
   }
@@ -532,6 +542,7 @@ nav {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -543,6 +554,7 @@ nav {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -554,6 +566,7 @@ nav {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -565,6 +578,7 @@ nav {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -572,10 +586,12 @@ nav {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -586,6 +602,7 @@ nav {
     opacity: 0;
     transform: translateX(-100%) translateY(-100%);
   }
+
   100% {
     opacity: 0;
     transform: translateX(100%) translateY(100%);
@@ -593,10 +610,12 @@ nav {
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-15px);
   }
@@ -606,12 +625,15 @@ nav {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 1;
   }
+
   95% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -628,6 +650,7 @@ nav {
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -635,13 +658,16 @@ nav {
 }
 
 @keyframes tilt {
+
   0%,
   100% {
     transform: rotateX(0deg) rotateY(0deg);
   }
+
   25% {
     transform: rotateX(2deg) rotateY(-2deg);
   }
+
   75% {
     transform: rotateX(-2deg) rotateY(2deg);
   }
@@ -650,21 +676,27 @@ nav {
 .fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }
+
 .fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
 .fade-in-left {
   animation: fadeInLeft 0.8s ease-out forwards;
 }
+
 .fade-in-right {
   animation: fadeInRight 0.8s ease-out forwards;
 }
+
 .slide-in-down {
   animation: slideInDown 0.6s ease-out forwards;
 }
+
 .scale-in {
   animation: scaleIn 0.8s ease-out forwards;
 }
+
 .glow-animate {
   animation: glowPulse 3s ease-in-out infinite;
 }
@@ -673,6 +705,7 @@ nav {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
+
 .scroll-fade-in-stagger {
   opacity: 0;
   animation: fadeInUpStagger 0.8s ease-out forwards;
@@ -798,7 +831,7 @@ footer .container {
   margin: 0;
 }
 
-.footer-bottom > div {
+.footer-bottom>div {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -971,6 +1004,7 @@ footer .container {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -982,6 +1016,7 @@ footer .container {
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(100%);
     opacity: 0;
@@ -996,13 +1031,11 @@ footer .container {
     width: 100%;
     max-width: 350px;
     height: 100vh;
-    background: linear-gradient(
-      135deg,
-      rgba(15, 15, 15, 0.98) 0%,
-      rgba(81, 81, 82, 0.95) 100%
-    );
+    background: linear-gradient(135deg,
+        rgba(15, 15, 15, 0.98) 0%,
+        rgba(81, 81, 82, 0.95) 100%);
     backdrop-filter: blur(20px);
-    
+
     border-left: 2px solid rgba(209, 156, 74, 0.3);
     flex-direction: column;
     gap: 0;
@@ -1078,7 +1111,7 @@ footer .container {
     gap: var(--space-md);
   }
 
-  .footer-bottom > div {
+  .footer-bottom>div {
     flex-direction: column;
     gap: var(--space-md);
   }
@@ -1090,7 +1123,7 @@ footer .container {
   .dropdown-menu {
     position: static;
     display: none;
-    background: rgba(209, 156, 74, 0.08);
+    background: rgba(0, 0, 0, 0.08);
     border: none;
     box-shadow: none;
     padding: 10px 0;
