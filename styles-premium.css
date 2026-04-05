@@ -1777,10 +1777,11 @@ section h2 {
 
 .brand-tagline {
   font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 0.95rem;
+  font-style: normal;
+  font-size: 1.25rem;
   margin-bottom: 20px;
   opacity: 0.8;
+  color:#ffffff
 }
 
 .address-item {
@@ -1797,9 +1798,11 @@ section h2 {
 }
 
 .address-item p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+  font-family: "Playfair Display", serif;
+  color: var(--secondary-light);
 }
 
 .footer-links {
@@ -1813,7 +1816,7 @@ section h2 {
 
 .footer-links a {
   font-family: "Playfair Display", serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--secondary-light);
   transition: var(--transition-fast);
 }
@@ -1870,7 +1873,12 @@ section h2 {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: var(--secondary-gray);
+  color: #FFFFFF;
+}
+.footer-bottom-premium p{
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-family: "Playfair Display", serif;
 }
 
 .legal-links {
@@ -2520,6 +2528,8 @@ section h2 {
   .features-grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+    display: flex;
+        flex-wrap: wrap;
   }
 
   .feature-box {
@@ -2681,13 +2691,6 @@ section h2 {
   letter-spacing: 1px;
 }
 
-.brand-tagline {
-  font-family: "Kenao", serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-  opacity: 0.8;
-}
 
 .address-item {
   display: flex;
@@ -2702,12 +2705,6 @@ section h2 {
   margin-top: 5px;
 }
 
-.address-item p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
-}
-
 .footer-links {
   list-style: none;
   padding: 0;
@@ -2717,12 +2714,6 @@ section h2 {
   margin-bottom: 12px;
 }
 
-.footer-links a {
-  font-family: "Kenao", serif;
-  font-size: 0.95rem;
-  color: var(--secondary-light);
-  transition: var(--transition-fast);
-}
 
 .footer-links a:hover {
   color: var(--primary-gold);
@@ -2768,16 +2759,6 @@ section h2 {
   background: var(--primary-gold);
   color: #000;
   transform: translateY(-3px);
-}
-
-.footer-bottom-premium {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.85rem;
-  color: var(--secondary-gray);
 }
 
 .legal-links {
