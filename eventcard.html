@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Event Services | AR Event and Wedding Planner - Muzaffarpur, Bihar</title>
+    <meta
+      name="title"
+      content="Our Event Services | AR Event and Wedding Planner - Muzaffarpur, Bihar"
+    />
+    <meta
+      name="description"
+      content="Explore comprehensive event management services by AR Event and Wedding Planner in Muzaffarpur, Bihar. We offer wedding planning, corporate events, birthday parties, cultural events, award ceremonies, and private celebrations."
+    />
+    <meta
+      name="keywords"
+      content="Event Management Services Muzaffarpur, Wedding Planning Services Bihar, Corporate Event Services, Birthday Party Planning, Cultural Event Management, Award Ceremony Planning, Private Party Services, Event Organizer Muzaffarpur, Full Service Event Planner Bihar"
+    />
+    <meta name="author" content="AR event and wedding planner" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <link rel="canonical" href="https://arevents.in/eventcard.html" />
+
+    <meta name="geo.region" content="IN-BR" />
+    <meta name="geo.placename" content="Muzaffarpur" />
+    <meta name="geo.position" content="26.1205614;85.3861014" />
+    <meta name="ICBM" content="26.1205614, 85.3861014" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arevents.in/eventcard.html" />
+    <meta
+      property="og:title"
+      content="Our Event Services | AR Event and Wedding Planner"
+    />
+    <meta
+      property="og:description"
+      content="Discover how AR event and wedding planner crafts extraordinary events across weddings, corporate events, festivals, and celebrations in Muzaffarpur, Bihar."
+    />
+    <meta
+      property="og:image"
+      content="https://arevents.in/assets/logo2.svg"
+    />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="AR Event and Wedding Planner" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://arevents.in/eventcard.html" />
+    <meta
+      name="twitter:title"
+      content="Event Services - AR Events Muzaffarpur"
+    />
+    <meta
+      name="twitter:description"
+      content="Comprehensive event management services in Muzaffarpur, Bihar. Weddings, corporate events & more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://arevents.in/assets/logo2.svg"
+    />
+
+    <link rel="shortcut icon" href="./assets/logo2.svg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./assets/logo2.svg" />
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./index.css" />
+    <!-- Font Awesome with font-display optimization -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
+
+    <style>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 4vw;
+      }
+      /* Add animation for service cards */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .service-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(
+          45deg,
+          #f4b86f 0%,
+          #a27158 50%,
+          #5c0469 100%
+        );
+        color: #fff;
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: left;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        min-height: 380px;
+        box-sizing: border-box;
+        animation: fadeInUp 1s ease-out forwards; /* Add this animation */
+        opacity: 0; /* Start as invisible */
+      }
+
+      /* Delay the animation based on the index of the card to create a staggered effect */
+      .service-card:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .service-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .service-card:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      .service-card:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      .service-card:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+
+      .service-card:nth-child(6) {
+        animation-delay: 1s;
+      }
+
+      .service-card:nth-child(7) {
+        animation-delay: 1.2s;
+      }
+
+      .service-card:nth-child(8) {
+        animation-delay: 1.4s;
+      }
+
+      .service-card:nth-child(9) {
+        animation-delay: 1.6s;
+      }
+
+      /* Hover effects */
+      .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .service-card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .learn-more {
+        margin-top: auto;
+        align-self: flex-end;
+        text-align: right;
+        color: #fff;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+          padding: 2vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <section class="hero-section-services">
+      <div class="nav-component">
+        <div class="nav-logo"></div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="corporate-events.html">Corporate Events</a></li>
+            <li><a href="wedding-planning.html">Wedding Planning</a></li>
+            <li><a href="birthday-parties.html">Birthday Parties</a></li>
+            <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
+            <li><a href="cultural-events.html">Cultural Events</a></li>
+            <li><a href="college-festivals.html">College Festivals</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMobileNav()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="photo-card card-top-left">
+        <img
+          src="./assets/images/Wedding/475159695_1097850219043563_871709032766323656_n.webp"
+          alt="Event 1"
+        />
+      </div>
+
+      <div class="photo-card card-top-right">
+        <img src="./assets/images/1.webp" alt="Event 2" />
+      </div>
+
+      <div class="photo-card card-bottom-left">
+        <img
+          src="./assets/images/Stage/465692651_8953257021380443_8109159992700779700_n.webp"
+          alt="Event 3"
+        />
+      </div>
+
+      <div class="photo-card card-bottom-right">
+        <img src="./assets/images/3.webp" alt="Event 4" />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Services</h1>
+        <p>
+          We organize spectacular events that are unforgettable, creative, and
+          flawless.
+        </p>
+        <a href="./book.html" class="hero-btn">Plan Your Event</a>
+      </div>
+    </section>
+
+    <section>
+      <h1 style="text-align: center; margin: 2rem 0">Our Services</h1>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-building"></i>
+          <h3>Corporate Events</h3>
+          <p>
+            Professional management for conferences, seminars, team-building
+            retreats, corporate parties, and executive meetings tailored to your
+            business goals.
+          </p>
+          <a href="#" class="learn-more">Learn more about corporate events</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-heart"></i>
+          <h3>Wedding Planning</h3>
+          <p>
+            Turning your dream wedding into a beautifully orchestrated
+            celebration with complete venue decoration, catering, entertainment,
+            and guest management.
+          </p>
+          <a href="#" class="learn-more">Learn more about wedding planning</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Birthday Parties</h3>
+          <p>
+            Planning unique birthday experiences for all age groups with theme
+            decoration, entertainment, custom cakes, and memorable party
+            activities.
+          </p>
+          <a href="#" class="learn-more">Learn more about birthday parties</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>College Festivals</h3>
+          <p>
+            Creative planning and execution for vibrant college festivals,
+            cultural nights, inter-college competitions, and student
+            exhibitions.
+          </p>
+          <a href="#" class="learn-more">Learn more about college festivals</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-trophy"></i>
+          <h3>Award Ceremonies</h3>
+          <p>
+            Organizing award ceremonies that honor talent and achievements with
+            grandeur — including red carpets, stage setup, and PR coverage.
+          </p>
+          <a href="#" class="learn-more">Learn more about award ceremonies</a>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-theater-masks"></i>
+          <h3>Cultural Events</h3>
+          <p>
+            Celebrating global and local cultures through expertly curated
+            performances, exhibitions, food fests, parades, and traditional
+            showcases.
+          </p>
+          <a href="#" class="learn-more">Learn more about cultural events</a>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-glass-cheers"></i>
+          <h3>Private Parties</h3>
+          <p>
+            Hosting intimate private gatherings, premium dinners, and
+            celebration parties with bespoke themes, entertainment, gourmet
+            menus, and full event concierge services.
+          </p>
+          <a href="#" class="learn-more">Learn more about private parties</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleMobileNav() {
+        document.querySelector(".nav-links").classList.toggle("active");
+      }
+    </script>
+    <script>
+      const links = document.querySelectorAll(".nav-links ul li a");
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach((link) => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/919006532324"
+        class="floating-btn whatsapp-btn"
+        data-tooltip="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp fa-bounce"></i>
+      </a>
+      <a
+        href="https://youtube.com/@areventandweddingplanner33?si=FHitkPhgihv9jRJK"
+        class="floating-btn youtube-btn"
+        data-tooltip="Watch on YouTube"
+        aria-label="Watch on YouTube"
+      >
+        <i class="fa-brands fa-youtube fa-beat-fade" style="color: #ff0000"></i>
+      </a>
+      <a
+        href="tel:+919006532324"
+        class="floating-btn call-btn"
+        data-tooltip="Call Us"
+        aria-label="Call Us"
+      >
+        <i class="fa-solid fa-phone-volume fa-shake"></i>
+      </a>
+    </div>
+    <footer class="footer-enhanced">
+      <div class="footer-container">
+        <div class="footer-column footer-about">
+          <div class="footer-logo-section">
+            <div class="footer-icon-flex">
+              <div class="icon-1"></div>
+              <span class="line">|</span>
+              <div class="icon-2"></div>
+            </div>
+          </div>
+          <p class="footer-description">
+            A Pioneer in the Event Management & Wedding Planner Field From
+            Muzaffarpur, Bihar. Creating unforgettable moments since 2013.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://wa.me/919006532324"
+              target="_blank"
+              aria-label="WhatsApp"
+              class="social-icon"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://youtube.com/@areventandweddingplanner33"
+              target="_blank"
+              aria-label="YouTube"
+              class="social-icon"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/people/AR-event-and-wedding-planner/100064093007551/"
+              target="_blank"
+              aria-label="Facebook"
+              class="social-icon"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/ar_event_and_wedding_planner/"
+              target="_blank"
+              aria-label="Instagram"
+              class="social-icon"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column footer-services">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-list">
+            <li><a href="wedding-planning.html">Wedding Planning</a></li>
+            <li><a href="corporate-events.html">Corporate Events</a></li>
+            <li><a href="birthday-parties.html">Birthday Parties</a></li>
+            <li><a href="cultural-events.html">Cultural Events</a></li>
+            <li><a href="college-festivals.html">College Festivals</a></li>
+            <li><a href="award-ceremonies.html">Award Ceremonies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-quick-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3 class="footer-heading">Contact Us</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                >Nirala Nagar, P&T chowk<br />Muzaffarpur - 842001, Bihar</span
+              >
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+919006532324">+91-9006532324</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:areventsol.2013@gmail.com"
+                >areventsol.2013@gmail.com</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-clock"></i>
+              <span>Mon - Sun: 9:00 AM - 9:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>© 2025 AR Event and Wedding Planner. All rights reserved.</p>
+          <p class="footer-developer">
+            Developed by
+            <a href="https://pixelatenest.com" target="_blank">Pixelate Nest</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
